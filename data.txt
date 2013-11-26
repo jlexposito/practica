@@ -1,0 +1,14 @@
+55555 4444 12345 987654 assyriology . . 	
+calculus . . computability . . 				
+888 777 levitation . . 
+gravitation . . 
+byzantine_literature . . 
+2222 byzantine_literature . . 
+9999 . assyriology . .
+
+
+-1 unspecific_journal byzantine_literature . 4	
+
+-1 specific_journal computability . 4
+
+-3 unspecific_journal specific_journal
