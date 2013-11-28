@@ -134,4 +134,37 @@ void Estructura::clas_criterio1(Arbre<string>& a, vector<bool>& b, const list<st
 
 	}
 }
-	
+
+void Estructura::clas_criterio2(Arbre<string>& a, Revista& r1, bool& b, string& res){
+	if(not a.es_buit()){
+		string s = a.arrel();
+		Arbre<string> ae, ad;
+		a.fills(ae,ad);
+		bool be, bd;
+		be = bd = false;
+		if(ae.es_buit() and ad.es_buit()){
+			b = r1.buscar_palabra_clave(s);
+			if(b)res = s;
+		}
+		else{
+			clas_criterio2(ae, r1, be, res);
+			clas_criterio2(ad, r1, bd, res);
+			b = bd or be;
+			if(be and bd){
+				res  = s;
+				b = bd;
+			}
+		}
+		cout << s << " " << b  << " " << be << " " << bd  << " " << res<< endl;
+
+		a.plantar(s, ae, ad);
+	}
+}
+
+string Estructura::criterio2(Revista& r){
+	bool b = false;
+	string res;
+	Arbre<string> a = clasificacion;
+	clas_criterio2(a, r, b, res);
+	return res;
+}

@@ -52,3 +52,14 @@ void Revista::list_palabras_clave(list<string>& pc){		//NO VALIDO
 	pc = palabras_clave;
 }
 
+bool Revista::buscar_palabra_clave(const string& nombre){
+	bool resultat = false;
+	list<string>::const_iterator it = palabras_clave.begin();
+	while(it != palabras_clave.end() and not resultat){
+		if((*it) == nombre) resultat = true;
+		++it;
+	}
+	return resultat;
+}
+
+

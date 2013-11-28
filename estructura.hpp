@@ -34,8 +34,8 @@ public:
     void escriure_estructura();
     string criterio1(Revista& r1);
     void clas_criterio1(Arbre<string>& a, vector<bool>& b, const list<string>& pc, int& nivell, string& res, int& nivellres);
-
-
+    void clas_criterio2(Arbre<string>& a, Revista& r1, bool& b, string& res);
+    string criterio2(Revista& r);
 };
 
 #endif

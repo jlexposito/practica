@@ -28,6 +28,9 @@ int main(){
 				Revista r = (*it);
 				string nombre = c.criterio1(r);
 				cout << nombre << endl;
+				string mierder = c.criterio2(r);
+				cout << mierder << endl;
+				//cout << "RECORREGUT ACABAT" << endl;
 				int area = 1;
 				//(*it).asignar_area(area, nombre);
 			}

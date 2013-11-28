@@ -7,10 +7,10 @@ byzantine_literature . .
 9999 . assyriology . .
 
 
--1 big_trouble levitation . 1
+-1 big_trouble computability . 1
 
--1 small_trouble  gravitation . 3
+-1 small_trouble  calculus . 3
 
 -3 big_trouble small_trouble
 
--2
+2
