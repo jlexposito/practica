@@ -12,5 +12,6 @@ byzantine_literature . .
 -1 small_trouble  calculus . 3
 
 -3 big_trouble small_trouble
-
-2
+-5 big_trouble
+-5 tomataka
+-7

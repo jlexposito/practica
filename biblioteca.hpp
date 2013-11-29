@@ -6,6 +6,8 @@ class Biblioteca {
 
 private:
 	list<Revista> llibreria;
+	list<Revista> criteri1, criteri2;
+	int calidad_maxima;
 	int nrevistas;
 	
 	//PLANTEAR COMO ORDENAR PARA CRITERIOS!!
@@ -18,6 +20,7 @@ public:
         \post se ha añadido al parámetro implícito la revista.
     */
     void anadir_revista();
+    Biblioteca (int n);
 
     /** @brief Eliminar revista.
         \pre cierto.

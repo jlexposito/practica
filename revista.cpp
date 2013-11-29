@@ -11,13 +11,24 @@ void Revista::leer_revista(){
 }
 
 void Revista::anadir_palabras_clave(string s){
-	list<string>::iterator it;
-	it = palabras_clave.end();
+	list<string>::iterator it = palabras_clave.begin();
+	bool trobat = false;
+	while(it != palabras_clave.end() and not trobat){
+		if((*it) < s) ++it;
+		else{
+			trobat = true;
+		}
+	}
 	palabras_clave.insert(it,s);
 }
 
 string Revista::consultar_nombre(){
 	return nombre;
+}
+
+string Revista::consultar_AreaTematica(const int i){
+	if(i == 1) return AreaTematica1;
+	if(i == 2) return AreaTematica2;
 }
 
 string Revista::consultar_palabra_clave(const int i){
@@ -60,6 +71,11 @@ bool Revista::buscar_palabra_clave(const string& nombre){
 		++it;
 	}
 	return resultat;
+}
+
+void Revista::modificar_AreasTematicas(const string area1, const string area2){
+	AreaTematica1 = area1;
+	AreaTematica2 = area2;
 }
 
 

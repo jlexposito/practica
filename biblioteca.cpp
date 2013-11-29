@@ -1,5 +1,8 @@
 #include "biblioteca.hpp"
 
+Biblioteca::Biblioteca(int n){
+	calidad_maxima = n;
+}
 void Biblioteca::anadir_revista(){
 	Revista r;
 	r.leer_revista();

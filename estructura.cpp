@@ -155,8 +155,6 @@ void Estructura::clas_criterio2(Arbre<string>& a, Revista& r1, bool& b, string& 
 				b = bd;
 			}
 		}
-		cout << s << " " << b  << " " << be << " " << bd  << " " << res<< endl;
-
 		a.plantar(s, ae, ad);
 	}
 }

@@ -8,7 +8,6 @@
 class Revista { 
 
 private:
-	static int calidad_maxima;
 	int calidad;
 	string nombre;
 	list<string> palabras_clave;
@@ -60,6 +59,7 @@ public:
 	void listar_palabras_clave();
 	int consultar_calidad();
 	void list_palabras_clave(list<string>& pc);
+	void modificar_AreasTematicas(const string area1, const string area2);
 };
 
 #endif
