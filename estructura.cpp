@@ -41,13 +41,16 @@ void Estructura::llegir_estructura(){
 string Estructura::criterio1(Revista& r1){
 	string res;
 	int tamany = r1.num_pal_clave();
-	vector<bool> b(tamany, false);
-	list<string> pc;
-	r1.list_palabras_clave(pc);
-	Arbre<string> a = clasificacion;
-	int nivellres = 0;
-	int nivell = 0;
-	clas_criterio1(a, b, pc, nivell, res, nivellres);
+	if(tamany > 1){
+		vector<bool> b(tamany, false);
+		list<string> pc;
+		r1.list_palabras_clave(pc);
+		Arbre<string> a = clasificacion;
+		int nivellres = 0;
+		int nivell = 0;
+		clas_criterio1(a, b, pc, nivell, res, nivellres);
+	}
+	else res = r1.consultar_palabra_clave(1);
 	cout << endl;
 	return res;
 }

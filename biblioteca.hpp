@@ -19,7 +19,7 @@ public:
         \pre esta preparada la revista en el canal de entrada.
         \post se ha añadido al parámetro implícito la revista.
     */
-    void anadir_revista();
+    void anadir_revista(Revista& r);
     Biblioteca (int n);
 
     /** @brief Eliminar revista.
@@ -43,6 +43,7 @@ public:
     void buscar_revistas(const string r1, const string r2, bool& b1, bool& b2, list<Revista>::iterator& it1, list<Revista>::iterator& it2);
     void buscar_revista(const string r1, bool& b1, list<Revista>::iterator& it1);
     void eliminar_revista_iterador(list<Revista>::iterator& it);
+    void ordenar_criteri(const int& criteri, const int& nivellmin);
 
 };
 

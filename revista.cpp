@@ -13,13 +13,15 @@ void Revista::leer_revista(){
 void Revista::anadir_palabras_clave(string s){
 	list<string>::iterator it = palabras_clave.begin();
 	bool trobat = false;
-	while(it != palabras_clave.end() and not trobat){
+	bool repetit = false;
+	while(it != palabras_clave.end() and not trobat and not repetit){
 		if((*it) < s) ++it;
+		else if((*it) == s) repetit = true;
 		else{
 			trobat = true;
 		}
 	}
-	palabras_clave.insert(it,s);
+	if(not repetit)palabras_clave.insert(it,s);
 }
 
 string Revista::consultar_nombre(){
