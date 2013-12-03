@@ -11,7 +11,6 @@ private:
 	Arbre<string> clasificacion;
 	static void anadir_palabra(list<string>& l, string& s);
 	static void juntar_listas(list<string>& l1, list<string>& l2);
-	static void listar_lista(list<string> l);
 public:
 
     /** @brief Clasificar criterios.

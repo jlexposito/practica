@@ -66,16 +66,6 @@ void Estructura::juntar_listas(list<string>& l1, list<string>& l2){
 	
 }
 
-void Estructura::listar_lista(list<string> l){
-	list<string>::iterator it = l.begin();
-	while(it != l.end()) {
-		cout << (*it) << " ";
-		++it;
-	}
-	cout << endl;
-}
-
-
 void Estructura::escriure_estructura(){
 	escriure_estructura_arbre(clasificacion);
 }
@@ -95,7 +85,6 @@ string Estructura::criterio1(Revista& r1){
 		clas_criterio1(a, l, r1, nivell, res, nivellres);
 	}
 	else res = r1.consultar_palabra_clave(1);
-	cout << endl;
 	return res;
 }
 
