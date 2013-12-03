@@ -5,8 +5,8 @@
 class Biblioteca {
 
 private:
-	list<Revista> llibreria;
-	int calidad_maxima;
+	vector<list<Revista> > llibreria;
+	vector<list<pair<string, string> > > lcriteri2;
 	int nrevistas;
 	
 	//PLANTEAR COMO ORDENAR PARA CRITERIOS!!
@@ -38,11 +38,9 @@ public:
          \post El canal estándar de salida contiene todas las revistas.
     */
     void listar_revistas(int n, int criterio);
-    void listar_revistas_all();
     void buscar_revistas(const string r1, const string r2, bool& b1, bool& b2, list<Revista>::iterator& it1, list<Revista>::iterator& it2);
     void buscar_revista(const string r1, bool& b1, list<Revista>::iterator& it1);
-    void eliminar_revista_iterador(list<Revista>::iterator& it);
-    void ordenar_criteri(const int& criteri, const int& nivellmin);
+    void eliminar_revista_iterador(list<Revista>::iterator& it, const int calidad);
 
 };
 

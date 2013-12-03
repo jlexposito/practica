@@ -44,7 +44,7 @@ int main(){
 			int calidad = readint();
 			int criterio = readint();
 			cout << "Revista de calidad " << calidad << " por criterio " << criterio << endl;
-			b.ordenar_criteri(criterio,calidad);
+			//b.ordenar_criteri(criterio,calidad);
 			cout << endl;
 		}
 		else if (operacion == -5){		//CONSULTA DE REVISTAS POR TÍTULO
@@ -63,11 +63,7 @@ int main(){
 			}
 			else cout << "La revista " << r1 << " no existe"<< endl;
 			cout << endl;
-		}
-		else if(operacion == -7){		
-			cout << "<< LISTAR REVISTAS >>" << endl;
-			b.listar_revistas_all();
-		}		
+		}	
 		operacion = readint();
 	}
 }
