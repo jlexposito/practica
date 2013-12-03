@@ -6,7 +6,6 @@ class Biblioteca {
 
 private:
 	list<Revista> llibreria;
-	list<Revista> criteri1, criteri2;
 	int calidad_maxima;
 	int nrevistas;
 	

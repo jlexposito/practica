@@ -8,15 +8,17 @@ int main(){
 	c.llegir_estructura();
 	//cout << "ESTRUCTURA LLEGIDA!" << endl;
 	int operacion = readint();
-	while(operacion != -7){
+	while(operacion != -6){
 		if(operacion == -1){		//ALTA REVISTA
 			//cout << "<< AFEGIR REVISTA >>" << endl;
 			Revista r;
 			r.leer_revista();
 			string area1 = c.criterio1(r);
 			string area2 = c.criterio2(r);
+			//cout << area1 << " <<AREA1 AREA2>> " << area2 << endl;
 			r.modificar_AreasTematicas(area1, area2);
 			b.anadir_revista(r);
+			//cout << "ACABADO " << endl;
 		}
 		else if(operacion == -2){
 			//cout << "<< ELIMINAR REVISTA >>" << endl;
@@ -62,10 +64,9 @@ int main(){
 			else cout << "La revista " << r1 << " no existe"<< endl;
 			cout << endl;
 		}
-		else if(operacion == -6){		//BAJA REVISTA
+		else if(operacion == -7){		
 			cout << "<< LISTAR REVISTAS >>" << endl;
 			b.listar_revistas_all();
-			cout << "      << ACABADO >>" <<endl;
 		}		
 		operacion = readint();
 	}

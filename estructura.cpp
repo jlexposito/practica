@@ -29,6 +29,52 @@ void Estructura::escriure_estructura_arbre(Arbre<string> &a) {
   }
 }
 
+void Estructura::anadir_palabra(list<string>& l, string& s){
+	list<string>::iterator it = l.begin();
+	bool trobat = false;
+	bool repetit = false;
+	while(it != l.end() and not trobat){
+		if((*it) == s) {
+			repetit = true;
+			trobat = true;
+		}
+		else if((*it) > s) trobat = true;
+		else ++it;
+	}
+	l.insert(it, s);
+}
+
+void Estructura::juntar_listas(list<string>& l1, list<string>& l2){
+	list<string>::iterator it1;
+	list<string>::iterator it2;
+	it1 = l1.begin();
+	it2 = l2.begin();
+	while(it1 != l1.end() and it2 != l2.end()){
+		if((*it1) == (*it2)) ++it2;
+		else if((*it1) > (*it2)) {
+			l1.insert(it1, (*it2));
+			++it2;
+		}
+		else ++it1;
+	}
+	if(it1 == l1.end() and it2 != l2.end()){
+		while(it2 != l2.end()) {
+			l1.insert(l1.end(), (*it2));
+			++it2;
+		}
+	}
+	
+}
+
+void Estructura::listar_lista(list<string> l){
+	list<string>::iterator it = l.begin();
+	while(it != l.end()) {
+		cout << (*it) << " ";
+		++it;
+	}
+	cout << endl;
+}
+
 
 void Estructura::escriure_estructura(){
 	escriure_estructura_arbre(clasificacion);
@@ -42,51 +88,39 @@ string Estructura::criterio1(Revista& r1){
 	string res;
 	int tamany = r1.num_pal_clave();
 	if(tamany > 1){
-		vector<bool> b(tamany, false);
-		list<string> pc;
-		r1.list_palabras_clave(pc);
+		list<string> l;
 		Arbre<string> a = clasificacion;
 		int nivellres = 0;
 		int nivell = 0;
-		clas_criterio1(a, b, pc, nivell, res, nivellres);
+		clas_criterio1(a, l, r1, nivell, res, nivellres);
 	}
 	else res = r1.consultar_palabra_clave(1);
 	cout << endl;
 	return res;
 }
 
-void Estructura::clas_criterio1(Arbre<string>& a, vector<bool>& b, const list<string>& pc, int& nivell, string& res, int& nivellres){
+void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, int& nivell, string& res, int& nivellres){
 	if(not a.es_buit()){
 		string s = a.arrel();
 		Arbre<string> ae, ad;
 		a.fills(ae,ad);
 		if(ae.es_buit() and ad.es_buit()){
-			list<string>::const_iterator it = pc.begin();
-			int i = 0;
-			while(it != pc.end()){
-				if((*it) == s) b[i] = true;
-				++it;
-				++i;
-			}
+			//COMPROVAR SI ES PC
+			bool b = r1.buscar_palabra_clave(s);
+			if (b) anadir_palabra(l,s);
 		}
 		else {
 			int nivellE = nivell+1;
 			int nivellD = nivell+1;
 			string resE, resD;
-			vector<bool> be (b.size(), false);
-			vector<bool> bd (b.size(), false);
+			list<string> le;
+			list<string> ld;
 			int nivellresE, nivellresD;
 			nivellresE = nivellresD = 0;
-			if(not ae.es_buit())clas_criterio1(ae, be, pc, nivellE, res, nivellres);
-			if(not ad.es_buit())clas_criterio1(ad, bd, pc, nivellD, res, nivellres);
-			bool alltrueE = true;
-			bool alltrueD = true;
-			for(int m = 0; m < b.size(); ++m){
-				if(be[m] == false)alltrueE = be[m];
-				if(bd[m] == false)alltrueD = bd[m];
-			}
-			if(alltrueE){
-				if(alltrueD){
+			if(not ae.es_buit())clas_criterio1(ae, le, r1, nivellE, res, nivellres);
+			if(not ad.es_buit())clas_criterio1(ad, ld, r1, nivellD, res, nivellres);
+			if(le.size() == r1.num_pal_clave()){
+				if(ld.size() == r1.num_pal_clave()){
 					if(nivellE >= nivellD){
 						if(nivellE > nivellres){
 							res = ae.arrel();
@@ -117,16 +151,16 @@ void Estructura::clas_criterio1(Arbre<string>& a, vector<bool>& b, const list<st
 					}
 				}
 			}
-			else if(alltrueD){
+			else if(ld.size() == r1.num_pal_clave()){
 				if(nivellD > nivellres){
 					res = ad.arrel();
 					nivellres = nivellD;
 				}
 			}
-			for(int i = 0; i < b.size(); ++i) b[i] = be[i] or bd[i];
-			bool alltrue = true;
-			for(int j = 0; j < b.size(); ++j) if(b[j] == false) alltrue = false;
-			if(alltrue){
+			//juntar listas
+			juntar_listas(le, ld);
+			l = le;
+			if(l.size() == r1.num_pal_clave()){
 				if(nivell > nivellres) {
 					res = s;
 					nivellres = nivell;

@@ -97,15 +97,12 @@ void Biblioteca::ordenar_criteri(const int& criteri, const int& calidad_min){
 	string area, nombre;
 	while(it != llibreria.end() and actual <= calidad_min){
 		actual = (*it).consultar_calidad();
-		//cout << actual << endl;
 		if(actual == calidad_min) {
-			//cout << "SON IGUALES" << endl;
 			nombre = (*it).consultar_nombre();
 			area = (*it).consultar_AreaTematica(criteri);
 			x.first = nombre;
 			x.second = area;
 			if(tamany == 0) {
-				//cout << "TAMAÑO 0" << endl;
 				res.insert(it1,x);
 			}
 			else {
@@ -122,7 +119,6 @@ void Biblioteca::ordenar_criteri(const int& criteri, const int& calidad_min){
 			}
 			++tamany;
 		}
-		//cout << "AUGMENTO" << endl;
 		++it;
 	}
 	it1 = res.begin();
