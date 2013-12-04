@@ -45,6 +45,7 @@ int main(){
 			int criterio = readint();
 			cout << "Revista de calidad " << calidad << " por criterio " << criterio << endl;
 			if(criterio == 1) b.listar_criterio1(calidad);
+			else b.listar_criterio2(calidad);
 			cout << endl;
 		}
 		else if (operacion == -5){		//CONSULTA DE REVISTAS POR TÍTULO
@@ -52,7 +53,7 @@ int main(){
 			cout << "Consulta de revista por titulo "<< endl;
 			list<Revista>::iterator it1;
 			bool b1 = false;
-			b.buscar_revista(r1, b1, it1);
+			b.buscar_revista_criterio1(r1, b1, it1);
 			if(b1){
 				cout << (*it1).consultar_nombre() << endl;
 				int tamany = (*it1).num_pal_clave();

@@ -14,12 +14,31 @@ void Biblioteca::anadir_revista(Revista& r){
 		else ++it;
 	}
 	llibreria[calidad-1].insert(it,r);
+	list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
+	trobat = false;
+	string area2 = r.consultar_AreaTematica(2);
+	while(it2 != lcriteri2[calidad-1].end() and not trobat){
+		if((*it2).first > area2) trobat = true;
+		else ++it2;
+	}
+	pair<string, string> x;
+	x.first = area2;
+	x.second = r.consultar_nombre();	
+	lcriteri2[calidad-1].insert(it2,x);
 }
 
 void Biblioteca::listar_criterio1(const int& calidad){
 	list<Revista>::iterator it = llibreria[calidad-1].begin();
 	while (it != llibreria[calidad-1].end()){
 		cout << (*it).consultar_AreaTematica(1) << " " << (*it).consultar_nombre() << endl;
+		++it;
+	}
+}
+
+void Biblioteca::listar_criterio2(const int& calidad){
+	list<pair<string, string> >::iterator it = lcriteri2[calidad-1].begin();
+	while (it != lcriteri2[calidad-1].end()){
+		cout << (*it).first << " " << (*it).second << endl;
 		++it;
 	}
 }
@@ -44,7 +63,7 @@ void Biblioteca::buscar_revistas(const string r1, const string r2, bool& b1, boo
 		++i;
 	}
 }
-void Biblioteca::buscar_revista(const string r1, bool& b1, list<Revista>::iterator& it1){
+void Biblioteca::buscar_revista_criterio1(const string r1, bool& b1, list<Revista>::iterator& it1){
 	int i = 0;
 	while(i < llibreria.size() and not b1) {
 		list<Revista>::iterator it;
@@ -61,16 +80,28 @@ void Biblioteca::buscar_revista(const string r1, bool& b1, list<Revista>::iterat
 	}
 }
 
-void Biblioteca::eliminar_revista_iterador(list<Revista>::iterator& it, const int calidad){
+void Biblioteca::buscar_revista_criterio2(const int& calidad, const string nombre, list<pair<string, string> >::iterator& it1){
+	bool trobat  = false;
+	while(it1 != lcriteri2[calidad-1].end() and not trobat){
+		if((*it1).second == nombre) trobat = true;
+	}
+}	
+
+void Biblioteca::eliminar_revista_iterador(list<Revista>::iterator& it, list<pair<string, string> >::iterator& it2, const int calidad){
 	it = llibreria[calidad-1].erase(it);
+	it2 = lcriteri2[calidad-1].erase(it2);
 }
 	
 void Biblioteca::eliminar_revista(string nombre){
 	list<Revista>::iterator it;
 	bool b = false;
-	buscar_revista(nombre, b, it);
+	buscar_revista_criterio1(nombre, b, it);
 	int calidad  = (*it).consultar_calidad();
-	if(b) eliminar_revista_iterador(it, calidad);
+	if(b) {
+		list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
+		buscar_revista_criterio2(calidad, nombre, it2);
+		eliminar_revista_iterador(it, it2, calidad);
+	}
 }
 
 void Biblioteca::fusionar_revistas(const string r1, const string r2, list<Revista>::iterator& it, bool& b1){
@@ -87,7 +118,9 @@ void Biblioteca::fusionar_revistas(const string r1, const string r2, list<Revist
 			(*it1).anadir_palabras_clave(palabra);
 		}
 		int calidadrev = (*it2).consultar_calidad();
-		eliminar_revista_iterador(it2, calidadrev);
+		list<pair<string, string> >::iterator it3 = lcriteri2[calidadrev-1].begin();
+		buscar_revista_criterio2(calidadrev, r2, it3);
+		eliminar_revista_iterador(it2, it3, calidadrev);
 		it = it1;
 	}
 	if(b1) it = it1;
