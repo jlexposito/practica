@@ -157,7 +157,6 @@ void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, 
 			 }
 		}
 		a.plantar(s, ae, ad);			
-
 	}
 }
 

@@ -41,6 +41,8 @@ public:
     void buscar_revistas(const string r1, const string r2, bool& b1, bool& b2, list<Revista>::iterator& it1, list<Revista>::iterator& it2);
     void buscar_revista(const string r1, bool& b1, list<Revista>::iterator& it1);
     void eliminar_revista_iterador(list<Revista>::iterator& it, const int calidad);
+	void listar_criterio1(const int& calidad);
+
 
 };
 

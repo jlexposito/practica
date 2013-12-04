@@ -44,7 +44,7 @@ int main(){
 			int calidad = readint();
 			int criterio = readint();
 			cout << "Revista de calidad " << calidad << " por criterio " << criterio << endl;
-			//b.ordenar_criteri(criterio,calidad);
+			if(criterio == 1) b.listar_criterio1(calidad);
 			cout << endl;
 		}
 		else if (operacion == -5){		//CONSULTA DE REVISTAS POR TÍTULO
