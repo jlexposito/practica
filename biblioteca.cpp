@@ -17,13 +17,17 @@ void Biblioteca::anadir_revista(Revista& r){
 	list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
 	trobat = false;
 	string area2 = r.consultar_AreaTematica(2);
+	string nombre = r.consultar_nombre();
 	while(it2 != lcriteri2[calidad-1].end() and not trobat){
-		if((*it2).first > area2) trobat = true;
+		if((*it2).first >= area2) {
+			if((*it2).second > nombre) trobat = true;
+			else ++it2;
+		}
 		else ++it2;
 	}
 	pair<string, string> x;
 	x.first = area2;
-	x.second = r.consultar_nombre();	
+	x.second = nombre;	
 	lcriteri2[calidad-1].insert(it2,x);
 }
 
