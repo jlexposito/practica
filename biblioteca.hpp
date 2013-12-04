@@ -44,6 +44,7 @@ public:
     void eliminar_revista_iterador(list<Revista>::iterator& it, list<pair<string, string> >::iterator& it2, const int calidad);
 	void listar_criterio1(const int& calidad);
 	void listar_criterio2(const int& calidad);
+	void modificar_area2(const string& a2, const string& nombre, const int& calidad);
 
 
 };

@@ -84,6 +84,7 @@ void Biblioteca::buscar_revista_criterio2(const int& calidad, const string nombr
 	bool trobat  = false;
 	while(it1 != lcriteri2[calidad-1].end() and not trobat){
 		if((*it1).second == nombre) trobat = true;
+		else ++it1;
 	}
 }	
 
@@ -125,4 +126,11 @@ void Biblioteca::fusionar_revistas(const string r1, const string r2, list<Revist
 	}
 	if(b1) it = it1;
 }
+
+void Biblioteca::modificar_area2(const string& a2, const string& nombre, const int& calidad){
+	list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
+	buscar_revista_criterio2(calidad, nombre, it2);
+	(*it2).first = a2;
+}
+
 

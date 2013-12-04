@@ -150,7 +150,7 @@ void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, 
 			juntar_listas(le, ld);
 			l = le;
 			if(l.size() == r1.num_pal_clave()){
-				if(nivell > nivellres) {
+				if(nivell >= nivellres) {
 					res = s;
 					nivellres = nivell;
 				 }

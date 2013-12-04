@@ -38,6 +38,8 @@ int main(){
 				string area1 = c.criterio1(r);
 				string area2 = c.criterio2(r);
 				(*it).modificar_AreasTematicas(area1, area2);
+				int calidad  = (*it).consultar_calidad();
+				b.modificar_area2(area2, r1, calidad);
 			}
 		}
 		else if (operacion == -4){
