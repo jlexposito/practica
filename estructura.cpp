@@ -110,26 +110,28 @@ void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, 
 			if(not ad.es_buit())clas_criterio1(ad, ld, r1, nivellD, res, nivellres);
 			if(le.size() == r1.num_pal_clave()){
 				if(ld.size() == r1.num_pal_clave()){
-					if(nivellE >= nivellD){
+					if(nivellE > nivellD){
 						if(nivellE > nivellres){
 							res = ae.arrel();
 							nivellres = nivellE;
 						}
-						if(nivellE == nivellD){
+					}
+					else if (nivellD > nivellE){
+						if(nivellD > nivellres){
+							res = ad.arrel();
+							nivellres = nivellD;
+						}
+					}
+					else{
+						if(nivellE > nivellres){
 							if(ae.arrel() < ad.arrel()){
 								res = ae.arrel();
 								nivellres = nivellE;
 							}
 							else {
 								res = ad.arrel();
-								nivellres = nivellD;
+								nivellres = nivellD;	
 							}
-						}
-					}
-					else{
-						if(nivellD > nivellres){
-							res = ad.arrel();
-							nivellres = nivellD;
 						}
 					}
 				}
@@ -155,7 +157,9 @@ void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, 
 					nivellres = nivell;
 				 }
 			 }
+			 //cout << s << " NivelE " << nivellE << " " << l.size() << " NivellD " << nivellD << " " << le.size() << " " << ld.size() << " " << res << " " << nivellres << endl;
 		}
+		
 		a.plantar(s, ae, ad);			
 	}
 }
