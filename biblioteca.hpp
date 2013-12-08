@@ -7,10 +7,11 @@ class Biblioteca {
 private:
 	vector<list<Revista> > llibreria;
 	vector<list<pair<string, string> > > lcriteri2;
-	int nrevistas;
+	void buscar_revistas(const string r1, const string r2, bool& b1, bool& b2, list<Revista>::iterator& it1, list<Revista>::iterator& it2);
+    void eliminar_revista_iterador(list<Revista>::iterator& it, list<pair<string, string> >::iterator& it2, const int calidad);
+	void buscar_revista_criterio1(const string r1, bool& b1, list<Revista>::iterator& it1);
+	void buscar_revista_criterio2(const int& calidad, const string nombre, list<pair<string, string> >::iterator& it1);
 	
-	//PLANTEAR COMO ORDENAR PARA CRITERIOS!!
-
 public:
     /*Creadoras*/
 
@@ -37,14 +38,10 @@ public:
          \pre cierto
          \post El canal estándar de salida contiene todas las revistas.
     */
-    void listar_revistas(int n, int criterio);
-    void buscar_revistas(const string r1, const string r2, bool& b1, bool& b2, list<Revista>::iterator& it1, list<Revista>::iterator& it2);
-    void buscar_revista_criterio1(const string r1, bool& b1, list<Revista>::iterator& it1);
-	void buscar_revista_criterio2(const int& calidad, const string nombre, list<pair<string, string> >::iterator& it1);
-    void eliminar_revista_iterador(list<Revista>::iterator& it, list<pair<string, string> >::iterator& it2, const int calidad);
+	
 	void listar_criterio1(const int& calidad);
 	void listar_criterio2(const int& calidad);
-	void modificar_area2(const string& a2, const string& nombre, const int& calidad);
+	void reordenar_areas(Revista& r, const int& calidad, const string& nombre, list<Revista>::iterator& it);
 
 
 };

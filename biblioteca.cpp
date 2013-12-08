@@ -8,20 +8,29 @@ void Biblioteca::anadir_revista(Revista& r){
 	bool trobat = false;
 	int calidad = r.consultar_calidad();
 	string area1 = r.consultar_AreaTematica(1);
+	string nombre = r.consultar_nombre();
 	list<Revista>::iterator it = llibreria[calidad-1].begin();
 	while(it != llibreria[calidad-1].end() and not trobat){
-		if((*it).consultar_AreaTematica(1) > area1) trobat = true;
+		if((*it).consultar_AreaTematica(1) >= area1){
+			if((*it).consultar_AreaTematica(1) == area1){
+				if((*it).consultar_nombre() > nombre) trobat = true;
+				else ++it;
+			}
+			else trobat = true;
+		}
 		else ++it;
 	}
 	llibreria[calidad-1].insert(it,r);
 	list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
 	trobat = false;
 	string area2 = r.consultar_AreaTematica(2);
-	string nombre = r.consultar_nombre();
 	while(it2 != lcriteri2[calidad-1].end() and not trobat){
 		if((*it2).first >= area2) {
-			if((*it2).second > nombre) trobat = true;
-			else ++it2;
+			if((*it2).first == area2){
+				if((*it2).second > nombre) trobat = true;
+				else ++it2;
+			}
+			else trobat = true;
 		}
 		else ++it2;
 	}
@@ -131,10 +140,12 @@ void Biblioteca::fusionar_revistas(const string r1, const string r2, list<Revist
 	if(b1) it = it1;
 }
 
-void Biblioteca::modificar_area2(const string& a2, const string& nombre, const int& calidad){
+void Biblioteca::reordenar_areas(Revista& r, const int& calidad, const string& nombre, list<Revista>::iterator& it){
 	list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
 	buscar_revista_criterio2(calidad, nombre, it2);
-	(*it2).first = a2;
+	it = llibreria[calidad-1].erase(it);
+	it2 = lcriteri2[calidad-1].erase(it2);
+	anadir_revista(r);
 }
 
 

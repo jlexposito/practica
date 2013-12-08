@@ -23,14 +23,13 @@ public:
     void anadir_palabras_clave(string s);
 
     /* Modificadoras */
-    void modificar_palabra_clave(string palabra, int i);
-
+    
     /* Consultoras */
     /** @brief Consultora del nombre de la revista
         \pre cierto.
         \post El resultado es nombre del parámetro implícito.
     */
-	string consultar_nombre();
+	const string consultar_nombre();
 
     /** @brief Consultora de la iessima palabra clave.
         \pre cierto.
@@ -41,13 +40,13 @@ public:
     
     bool buscar_palabra_clave(const string& nombre);
 
-    string consultar_palabra_clave(const int i);
+    const string consultar_palabra_clave(const int i);
 
     /** @brief Consultora del nombre del Area Tematica según clasificación
         \pre cierto.
         \post El resultado es el area tematica del parámetro implícito.
     */
-    string consultar_AreaTematica(const int i);
+    const string consultar_AreaTematica(const int i);
 
     /* Lectoras  y escritoras */
     /** @brief Lectora por defecto
@@ -56,9 +55,7 @@ public:
     */
     void leer_revista();
 	int num_pal_clave();
-	void listar_palabras_clave();
-	int consultar_calidad();
-	void list_palabras_clave(list<string>& pc);
+	const int consultar_calidad();
 	void modificar_AreasTematicas(const string area1, const string area2);
 };
 

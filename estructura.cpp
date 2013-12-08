@@ -13,22 +13,6 @@ void Estructura::llegir_estructura_arbre(Arbre<string>& a){
   }
 }
 
-
-void Estructura::escriure_estructura_arbre(Arbre<string> &a) {
-/* Pre: cert */ 
-/* Post: El canal estandar de sortida conté el recorregut en inordre d'a */ 
-  if (not a.es_buit()) {
-    Arbre<string> a1;
-    Arbre<string> a2;
-    string x = a.arrel();
-    a.fills(a1,a2);
-    escriure_estructura_arbre(a1); 
-    cout << " " << x;
-    escriure_estructura_arbre(a2);
-    a.plantar(x,a1,a2);
-  }
-}
-
 void Estructura::anadir_palabra(list<string>& l, string& s){
 	list<string>::iterator it = l.begin();
 	bool trobat = false;
@@ -64,10 +48,6 @@ void Estructura::juntar_listas(list<string>& l1, list<string>& l2){
 		}
 	}
 	
-}
-
-void Estructura::escriure_estructura(){
-	escriure_estructura_arbre(clasificacion);
 }
 
 void Estructura::llegir_estructura(){

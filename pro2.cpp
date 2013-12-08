@@ -6,27 +6,21 @@ int main(){
 	Biblioteca b(n);
 	Estructura c;
 	c.llegir_estructura();
-	//cout << "ESTRUCTURA LLEGIDA!" << endl;
 	int operacion = readint();
 	while(operacion != -6){
 		if(operacion == -1){		//ALTA REVISTA
-			//cout << "<< AFEGIR REVISTA >>" << endl;
 			Revista r;
 			r.leer_revista();
 			string area1 = c.criterio1(r);
 			string area2 = c.criterio2(r);
-			//cout << area1 << " <<AREA1 AREA2>> " << area2 << endl;
 			r.modificar_AreasTematicas(area1, area2);
 			b.anadir_revista(r);
-			//cout << "ACABADO " << endl;
 		}
 		else if(operacion == -2){
-			//cout << "<< ELIMINAR REVISTA >>" << endl;
 			string r1 = readstring();
 			b.eliminar_revista(r1);
 		}
 		else if(operacion == -3){		//FUSIONAR REVISTAS
-			//cout << "<< FUSIONAR REVISTA >>" << endl;
 			string r1, r2;
 			r1 = readstring();
 			r2 =  readstring();
@@ -37,9 +31,9 @@ int main(){
 				Revista r = (*it);
 				string area1 = c.criterio1(r);
 				string area2 = c.criterio2(r);
-				(*it).modificar_AreasTematicas(area1, area2);
+				r.modificar_AreasTematicas(area1, area2);
 				int calidad  = (*it).consultar_calidad();
-				b.modificar_area2(area2, r1, calidad);
+				b.reordenar_areas(r, calidad, r1, it);
 			}
 		}
 		else if (operacion == -4){

@@ -24,16 +24,16 @@ void Revista::anadir_palabras_clave(string s){
 	if(not repetit)palabras_clave.insert(it,s);
 }
 
-string Revista::consultar_nombre(){
+const string Revista::consultar_nombre(){
 	return nombre;
 }
 
-string Revista::consultar_AreaTematica(const int i){
+const string Revista::consultar_AreaTematica(const int i){
 	if(i == 1) return AreaTematica1;
 	if(i == 2) return AreaTematica2;
 }
 
-string Revista::consultar_palabra_clave(const int i){
+const string Revista::consultar_palabra_clave(const int i){
 	list<string>::iterator it;
 	it = palabras_clave.begin();
 	int n = 1;
@@ -44,25 +44,12 @@ string Revista::consultar_palabra_clave(const int i){
 	return *it;
 }
 
-void Revista::listar_palabras_clave(){
-	list<string>::iterator it;
-	it = palabras_clave.begin();
-	while (it != palabras_clave.end()){
-		cout << (*it) << endl;
-		++it;
-	}
-}
-
 int Revista::num_pal_clave(){
 	return palabras_clave.size();
 }
 
-int Revista::consultar_calidad(){
+const int Revista::consultar_calidad(){
 	return calidad;
-}
-
-void Revista::list_palabras_clave(list<string>& pc){		//NO VALIDO
-	pc = palabras_clave;
 }
 
 bool Revista::buscar_palabra_clave(const string& nombre){
