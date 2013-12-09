@@ -60,7 +60,7 @@ string Estructura::criterio1(Revista& r1){
 	if(tamany > 1){
 		list<string> l;
 		Arbre<string> a = clasificacion;
-		int nivellres = 0;
+		int nivellres = -1;
 		int nivell = 0;
 		clas_criterio1(a, l, r1, nivell, res, nivellres);
 	}
@@ -102,15 +102,31 @@ void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, 
 							nivellres = nivellD;
 						}
 					}
-					else{
-						if(nivellE > nivellres){
-							if(ae.arrel() < ad.arrel()){
-								res = ae.arrel();
-								nivellres = nivellE;
+					else{	//NIVELLS IGUALS
+						if(nivellE >= nivellres){
+							if(nivellE > nivellres){
+								if(ae.arrel() < ad.arrel()){
+									if(ae.arrel() < res) {
+										res = ae.arrel();
+										nivellres = nivellE;
+									}
+								}
+								else if(ad.arrel() < res){
+									res = ad.arrel();
+									nivellres = nivellD;
+								}
 							}
-							else {
-								res = ad.arrel();
-								nivellres = nivellD;	
+							else if(nivellE == nivellres){
+								if(ae.arrel() < ad.arrel()){
+									if(ae.arrel() < res) {
+										res = ae.arrel();
+										nivellres = nivellE;
+									}
+								}
+								else if(ad.arrel() < res) {
+									res = ad.arrel();
+									nivellres = nivellD;
+								}	
 							}
 						}
 					}
@@ -132,9 +148,12 @@ void Estructura::clas_criterio1(Arbre<string>& a, list<string>& l, Revista& r1, 
 			juntar_listas(le, ld);
 			l = le;
 			if(l.size() == r1.num_pal_clave()){
-				if(nivell >= nivellres) {
+				if(nivell > nivellres) {
 					res = s;
 					nivellres = nivell;
+				 }
+				 else if (nivell == nivellres){
+					 if(s < res) res = s;
 				 }
 			 }
 			 //cout << s << " NivelE " << nivellE << " " << l.size() << " NivellD " << nivellD << " " << le.size() << " " << ld.size() << " " << res << " " << nivellres << endl;

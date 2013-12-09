@@ -9,8 +9,7 @@ private:
 	vector<list<pair<string, string> > > lcriteri2;
 	void buscar_revistas(const string r1, const string r2, bool& b1, bool& b2, list<Revista>::iterator& it1, list<Revista>::iterator& it2);
     void eliminar_revista_iterador(list<Revista>::iterator& it, list<pair<string, string> >::iterator& it2, const int calidad);
-	void buscar_revista_criterio1(const string r1, bool& b1, list<Revista>::iterator& it1);
-	void buscar_revista_criterio2(const int& calidad, const string nombre, list<pair<string, string> >::iterator& it1);
+	
 	
 public:
     /*Creadoras*/
@@ -42,7 +41,8 @@ public:
 	void listar_criterio1(const int& calidad);
 	void listar_criterio2(const int& calidad);
 	void reordenar_areas(Revista& r, const int& calidad, const string& nombre, list<Revista>::iterator& it);
-
+	void buscar_revista_criterio1(const string r1, bool& b1, list<Revista>::iterator& it1);
+	void buscar_revista_criterio2(const int& calidad, const string nombre, list<pair<string, string> >::iterator& it1);
 
 };
 

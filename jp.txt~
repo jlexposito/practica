@@ -1,47 +1,390 @@
-5
-revistas internet videojuegos rockstar gta . . red . . 
-blizzard wow . .  sc . . tecnologia xataka movil . . 
-pc . . genbeta . . users oriente sc . . movil . .
-occidente bizantino gta . . . mc p . . l . .
-
--1 3dreal wow sc . 1
--1 trend pc genbeta . 2
--5 shop
--1 shop bizantino . 1
--4 1 1
--3 3dreal trend
--5 3dreal
--4 2 1
--1 gaming wow . 3
--3 3dreal gaming
--1 people p l . 2
--2 shop
--5 shop
--4 2 1
--6
-
-Salida:
 Consulta de revista por titulo
-La revista shop no existe
-
-Revistas de calidad 1 por criterio 1  
-bizantino shop
-blizzard 3dreal
+palabras
+aire luz tierra 
+avance abc
+1
 
 Consulta de revista por titulo
-3dreal
-bizantino pc sc wow   
-internet revista
+paraules
+aire tierra 
+componentes abc
+1
+
+Revistas de calidad 1 por criterio 1
+avance palabras
+comida zumbao
+componentes paraules
+
+Revistas de calidad 1 por criterio 2
+abc palabras
+abc paraules
+abc zumbao
+
+Revistas de calidad 1 por criterio 1
+avance zumbao
+componentes paraules
+
+Revistas de calidad 1 por criterio 2
+abc paraules
+abc zumbao
+
+Consulta de revista por titulo
+La revista palabras no existe
+
+Consulta de revista por titulo
+manolo
+chuchos pil_pil 
+bulbo yeah
+1
+
+Consulta de revista por titulo
+spock
+arroz pil_pil 
+bmw yeah
+1
+
+Consulta de revista por titulo
+churumbele
+espardenyes parapente 
+pistacho pistacho
+2
+
+Consulta de revista por titulo
+arreando
+camellos 
+camellos esquema
+3
+
+Consulta de revista por titulo
+churumbele
+arroz chuchos espardenyes oregano parapente 
+asaco asaco
+2
+
+Consulta de revista por titulo
+arreando
+arroz camellos chuchos espardenyes oregano parapente 
+asaco asaco
+3
+
+Consulta de revista por titulo
+La revista chistorra no existe
+
+Consulta de revista por titulo
+aguacates
+pop 
+pop pop
+3
+
+Revistas de calidad 3 por criterio 1
+asaco arreando
+cocos corre_corre
+pinypon comida_rapida
+pop aguacates
+
+Revistas de calidad 1 por criterio 2
+abc paraules
+abc zumbao
+esquema veeeenga_hombre
+pinypon chistorra
+yeah falete
+yeah manolo
+yeah quemedices
+yeah spock
+yeah tato
+yeah tete
+
+Consulta de revista por titulo
+nananana
+cacahuete cocotero 
+pinypon pinypon
+2
+
+Revistas de calidad 3 por criterio 1
+asaco arreando
+asaco nanananana
+pinypon comida_rapida
+
+Revistas de calidad 3 por criterio 2
+asaco arreando
+asaco nanananana
+pinypon comida_rapida
+
+Consulta de revista por titulo
+La revista nanananana no existe
+
+Consulta de revista por titulo
+chistorra
+cacahuete cocotero pipo pop zasca 
+pinypon pinypon
 1
 
 Revistas de calidad 2 por criterio 1
+aire bigotillo
+asaco palabras
+bmw agarrate
+bmw mamarracho
+bmw paquirrin
+cat tiruri
+chuchos teto
+luz ariete
+pinypon nananana
+pop chicote
+sastre animalicos
+
+Revistas de calidad 2 por criterio 2
+abc ariete
+abc bigotillo
+asaco palabras
+esquema animalicos
+pinypon nananana
+pop chicote
+yeah agarrate
+yeah mamarracho
+yeah paquirrin
+yeah teto
+yeah tiruri
 
 Consulta de revista por titulo
-La revista shop no existe
+La revista arrea no existe
+
+Revistas de calidad 3 por criterio 1
+asaco arreando
+pinypon comida_rapida
+
+Revistas de calidad 3 por criterio 2
+asaco arreando
+pinypon comida_rapida
+
+Consulta de revista por titulo
+veeeenga_hombre
+carros coches 
+cosas esquema
+1
+
+Consulta de revista por titulo
+spock
+agua arroz pil_pil 
+bmw yeah
+1
+
+Consulta de revista por titulo
+La revista mamarracho no existe
+
+Consulta de revista por titulo
+La revista dfdfd no existe
+
+Revistas de calidad 3 por criterio 1
+2 esperpento
+asaco arreando
+boom trueque
+pinypon comida_rapida
+
+Revistas de calidad 2 por criterio 2
+19 ggg
+19 ttt
+6 ahua
+abc ariete
+abc bigotillo
+asaco palabras
+esquema ruedas
+pinypon nananana
+pop chicote
+yeah agarrate
+yeah mc_fly
+yeah paquirrin
+yeah teto
+yeah tiruri
 
 Revistas de calidad 2 por criterio 1
-mc people
+1 ahua
+23 ttt
+aire bigotillo
+asaco palabras
+bmw agarrate
+bmw mc_fly
+bmw paquirrin
+cat tiruri
+chuchos teto
+luz ariete
+pinypon nananana
+pop chicote
+ruc ruedas
+x ggg
 
+Consulta de revista por titulo
+abc
+a b e 
+7 14
+1
 
+Consulta de revista por titulo
+abc
+a b c e 
+7 14
+1
 
+Consulta de revista por titulo
+La revista ahua no existe
 
+Revistas de calidad 3 por criterio 1
+2 esperpento
+asaco arreando
+boom trueque
+pinypon comida_rapida
+
+Revistas de calidad 3 por criterio 2
+6 esperpento
+asaco arreando
+esquema trueque
+pinypon comida_rapida
+
+Revistas de calidad 1 por criterio 1
+7 abc
+asaco hola
+asaco spock
+avance zumbao
+bmw falete
+bmw quemedices
+bulbo manolo
+componentes paraules
+oregano dock
+pinypon chistorra
+r6 tete
+
+Revistas de calidad 2 por criterio 1
+23 ttt
+aire bigotillo
+asaco palabras
+bmw agarrate
+bmw mc_fly
+bmw paquirrin
+cat tiruri
+chuchos teto
+luz ariete
+pinypon nananana
+pop chicote
+ruc ruedas
+x ggg
+
+Revistas de calidad 1 por criterio 2
+14 abc
+abc paraules
+abc zumbao
+asaco hola
+asaco spock
+pinypon chistorra
+yeah dock
+yeah falete
+yeah manolo
+yeah quemedices
+yeah tete
+
+Revistas de calidad 2 por criterio 2
+19 ggg
+19 ttt
+abc ariete
+abc bigotillo
+asaco palabras
+esquema ruedas
+pinypon nananana
+pop chicote
+yeah agarrate
+yeah mc_fly
+yeah paquirrin
+yeah teto
+yeah tiruri
+
+Consulta de revista por titulo
+La revista tito no existe
+
+Consulta de revista por titulo
+paquirrin
+agua chili 
+bmw bmw
+1
+
+Consulta de revista por titulo
+falete
+arroz chili chuchos oregano pil_pil 
+bmw yeah
+1
+
+Revistas de calidad 1 por criterio 1
+7 abc
+asaco hola
+asaco spock
+avance zumbao
+bmw paquirrin
+bmw quemedices
+bulbo manolo
+componentes paraules
+oregano dock
+pinypon chistorra
+
+Revistas de calidad 1 por criterio 1
+7 abc
+asaco hola
+asaco spock
+avance zumbao
+bmw paquirrin
+bmw quemedices
+bulbo manolo
+componentes paraules
+pinypon chistorra
+
+Revistas de calidad 2 por criterio 1
+23 ttt
+aire bigotillo
+asaco palabras
+bmw agarrate
+bmw mc_fly
+cat tiruri
+chuchos teto
+luz ariete
+pinypon nananana
+pop chicote
+ruc ruedas
+x ggg
+
+Revistas de calidad 3 por criterio 1
+2 esperpento
+asaco arreando
+boom trueque
+pinypon comida_rapida
+
+Revistas de calidad 2 por criterio 1
+23 ttt
+aire bigotillo
+asaco ariete
+asaco palabras
+bmw agarrate
+bmw mc_fly
+cat tiruri
+chuchos teto
+pinypon nananana
+pop chicote
+ruc ruedas
+x ggg
+
+Revistas de calidad 3 por criterio 2
+6 esperpento
+asaco arreando
+esquema trueque
+pinypon comida_rapida
+
+Consulta de revista por titulo
+ariete
+a agua arroz b c chili chuchos e luz oregano pil_pil 
+asaco asaco
+2
+
+Consulta de revista por titulo
+mc_fly
+arroz chili chuchos 
+bmw yeah
+2
+
+Revistas de calidad 3 por criterio 1
+
+Revistas de calidad 3 por criterio 2

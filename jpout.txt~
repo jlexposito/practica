@@ -1,0 +1,78 @@
+Revistas de calidad 3 por criterio 1
+3any int
+q2 char
+q2 string
+web double
+
+Revistas de calidad 3 por criterio 2
+fib double
+fib int
+upc char
+upc string
+
+Revistas de calidad 1 por criterio 1
+2any vector
+3any string
+
+Consulta de revista por titulo
+list
+ec ic m2 pro1 pro2
+upc fib
+2
+
+Consulta de revista por titulo
+vector
+ci ec ic m2 pro1
+fib fib
+1
+
+Consulta de revista por titulo
+vector
+ci ec ic m2 pro1 pro2
+fib fib
+1
+
+Revistas de calidad 1 por criterio 1
+ci list
+fib vector
+
+Revistas de calidad 1 por criterio 2
+fib vector
+net list
+
+Consulta de revista por titulo
+La revista list no existe
+
+Revistas de calidad 1 por criterio 1
+ci list
+fib vector
+
+Revistas de calidad 1 por criterio 2
+fib vector
+net list
+
+Consulta de revista por titulo
+La revista list no existe
+
+Revistas de calidad 2 por criterio 2
+fib list
+
+Revistas de calidad 2 por criterio 1
+q7 list
+
+Consulta de revista por titulo
+list
+ci ic
+q7 fib
+2
+
+Revistas de calidad 3 por criterio 1
+3any int
+q2 char
+web double
+
+Revistas de calidad 3 por criterio 2
+fib double
+fib int
+upc char
+

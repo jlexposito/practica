@@ -39,21 +39,24 @@ int main(){
 		else if (operacion == -4){
 			int calidad = readint();
 			int criterio = readint();
-			cout << "Revista de calidad " << calidad << " por criterio " << criterio << endl;
+			cout << "Revistas de calidad " << calidad << " por criterio " << criterio << endl;
 			if(criterio == 1) b.listar_criterio1(calidad);
 			else b.listar_criterio2(calidad);
 			cout << endl;
 		}
 		else if (operacion == -5){		//CONSULTA DE REVISTAS POR TÍTULO
 			string r1 = readstring();
-			cout << "Consulta de revista por titulo "<< endl;
+			cout << "Consulta de revista por titulo"<< endl;
 			list<Revista>::iterator it1;
 			bool b1 = false;
 			b.buscar_revista_criterio1(r1, b1, it1);
 			if(b1){
 				cout << (*it1).consultar_nombre() << endl;
 				int tamany = (*it1).num_pal_clave();
-				for(int i = 1; i <= tamany; ++i) cout << (*it1).consultar_palabra_clave(i) << " ";
+				for(int i = 1; i <= tamany; ++i) {
+					cout << (*it1).consultar_palabra_clave(i); 
+					if(i!= tamany) cout << " ";
+				}
 				cout << endl;
 				cout << (*it1).consultar_AreaTematica(1) << " " << (*it1).consultar_AreaTematica(2) << endl;
 				cout << (*it1).consultar_calidad() << endl;
