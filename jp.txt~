@@ -1,390 +1,96 @@
 Consulta de revista por titulo
-palabras
-aire luz tierra 
-avance abc
-1
-
-Consulta de revista por titulo
-paraules
-aire tierra 
-componentes abc
-1
-
-Revistas de calidad 1 por criterio 1
-avance palabras
-comida zumbao
-componentes paraules
-
-Revistas de calidad 1 por criterio 2
-abc palabras
-abc paraules
-abc zumbao
-
-Revistas de calidad 1 por criterio 1
-avance zumbao
-componentes paraules
-
-Revistas de calidad 1 por criterio 2
-abc paraules
-abc zumbao
-
-Consulta de revista por titulo
-La revista palabras no existe
-
-Consulta de revista por titulo
-manolo
-chuchos pil_pil 
-bulbo yeah
-1
-
-Consulta de revista por titulo
-spock
-arroz pil_pil 
-bmw yeah
-1
-
-Consulta de revista por titulo
-churumbele
-espardenyes parapente 
-pistacho pistacho
-2
-
-Consulta de revista por titulo
-arreando
-camellos 
-camellos esquema
-3
-
-Consulta de revista por titulo
-churumbele
-arroz chuchos espardenyes oregano parapente 
-asaco asaco
-2
-
-Consulta de revista por titulo
-arreando
-arroz camellos chuchos espardenyes oregano parapente 
-asaco asaco
-3
-
-Consulta de revista por titulo
-La revista chistorra no existe
-
-Consulta de revista por titulo
-aguacates
-pop 
-pop pop
-3
-
-Revistas de calidad 3 por criterio 1
-asaco arreando
-cocos corre_corre
-pinypon comida_rapida
-pop aguacates
-
-Revistas de calidad 1 por criterio 2
-abc paraules
-abc zumbao
-esquema veeeenga_hombre
-pinypon chistorra
-yeah falete
-yeah manolo
-yeah quemedices
-yeah spock
-yeah tato
-yeah tete
-
-Consulta de revista por titulo
-nananana
-cacahuete cocotero 
-pinypon pinypon
-2
-
-Revistas de calidad 3 por criterio 1
-asaco arreando
-asaco nanananana
-pinypon comida_rapida
-
-Revistas de calidad 3 por criterio 2
-asaco arreando
-asaco nanananana
-pinypon comida_rapida
-
-Consulta de revista por titulo
-La revista nanananana no existe
-
-Consulta de revista por titulo
-chistorra
-cacahuete cocotero pipo pop zasca 
-pinypon pinypon
-1
+La revista Gamusinos no existe
 
 Revistas de calidad 2 por criterio 1
-aire bigotillo
-asaco palabras
-bmw agarrate
-bmw mamarracho
-bmw paquirrin
-cat tiruri
-chuchos teto
-luz ariete
-pinypon nananana
-pop chicote
-sastre animalicos
+
+Revistas de calidad 1 por criterio 1
+
+Consulta de revista por titulo
+Gamusinos
+D F M
+25 24
+2
 
 Revistas de calidad 2 por criterio 2
-abc ariete
-abc bigotillo
-asaco palabras
-esquema animalicos
-pinypon nananana
-pop chicote
-yeah agarrate
-yeah mamarracho
-yeah paquirrin
-yeah teto
-yeah tiruri
-
-Consulta de revista por titulo
-La revista arrea no existe
-
-Revistas de calidad 3 por criterio 1
-asaco arreando
-pinypon comida_rapida
-
-Revistas de calidad 3 por criterio 2
-asaco arreando
-pinypon comida_rapida
-
-Consulta de revista por titulo
-veeeenga_hombre
-carros coches 
-cosas esquema
-1
-
-Consulta de revista por titulo
-spock
-agua arroz pil_pil 
-bmw yeah
-1
-
-Consulta de revista por titulo
-La revista mamarracho no existe
-
-Consulta de revista por titulo
-La revista dfdfd no existe
-
-Revistas de calidad 3 por criterio 1
-2 esperpento
-asaco arreando
-boom trueque
-pinypon comida_rapida
-
-Revistas de calidad 2 por criterio 2
-19 ggg
-19 ttt
-6 ahua
-abc ariete
-abc bigotillo
-asaco palabras
-esquema ruedas
-pinypon nananana
-pop chicote
-yeah agarrate
-yeah mc_fly
-yeah paquirrin
-yeah teto
-yeah tiruri
-
-Revistas de calidad 2 por criterio 1
-1 ahua
-23 ttt
-aire bigotillo
-asaco palabras
-bmw agarrate
-bmw mc_fly
-bmw paquirrin
-cat tiruri
-chuchos teto
-luz ariete
-pinypon nananana
-pop chicote
-ruc ruedas
-x ggg
-
-Consulta de revista por titulo
-abc
-a b e 
-7 14
-1
-
-Consulta de revista por titulo
-abc
-a b c e 
-7 14
-1
-
-Consulta de revista por titulo
-La revista ahua no existe
-
-Revistas de calidad 3 por criterio 1
-2 esperpento
-asaco arreando
-boom trueque
-pinypon comida_rapida
-
-Revistas de calidad 3 por criterio 2
-6 esperpento
-asaco arreando
-esquema trueque
-pinypon comida_rapida
+24 Gamusinos
 
 Revistas de calidad 1 por criterio 1
-7 abc
-asaco hola
-asaco spock
-avance zumbao
-bmw falete
-bmw quemedices
-bulbo manolo
-componentes paraules
-oregano dock
-pinypon chistorra
-r6 tete
-
-Revistas de calidad 2 por criterio 1
-23 ttt
-aire bigotillo
-asaco palabras
-bmw agarrate
-bmw mc_fly
-bmw paquirrin
-cat tiruri
-chuchos teto
-luz ariete
-pinypon nananana
-pop chicote
-ruc ruedas
-x ggg
-
-Revistas de calidad 1 por criterio 2
-14 abc
-abc paraules
-abc zumbao
-asaco hola
-asaco spock
-pinypon chistorra
-yeah dock
-yeah falete
-yeah manolo
-yeah quemedices
-yeah tete
-
-Revistas de calidad 2 por criterio 2
-19 ggg
-19 ttt
-abc ariete
-abc bigotillo
-asaco palabras
-esquema ruedas
-pinypon nananana
-pop chicote
-yeah agarrate
-yeah mc_fly
-yeah paquirrin
-yeah teto
-yeah tiruri
+A Alcohol
 
 Consulta de revista por titulo
-La revista tito no existe
+La revista Drojas_vlandas no existe
 
-Consulta de revista por titulo
-paquirrin
-agua chili 
-bmw bmw
-1
+Revistas de calidad 5 por criterio 1
+5 Party_hard
 
-Consulta de revista por titulo
-falete
-arroz chili chuchos oregano pil_pil 
-bmw yeah
-1
-
-Revistas de calidad 1 por criterio 1
-7 abc
-asaco hola
-asaco spock
-avance zumbao
-bmw paquirrin
-bmw quemedices
-bulbo manolo
-componentes paraules
-oregano dock
-pinypon chistorra
-
-Revistas de calidad 1 por criterio 1
-7 abc
-asaco hola
-asaco spock
-avance zumbao
-bmw paquirrin
-bmw quemedices
-bulbo manolo
-componentes paraules
-pinypon chistorra
-
-Revistas de calidad 2 por criterio 1
-23 ttt
-aire bigotillo
-asaco palabras
-bmw agarrate
-bmw mc_fly
-cat tiruri
-chuchos teto
-luz ariete
-pinypon nananana
-pop chicote
-ruc ruedas
-x ggg
-
-Revistas de calidad 3 por criterio 1
-2 esperpento
-asaco arreando
-boom trueque
-pinypon comida_rapida
-
-Revistas de calidad 2 por criterio 1
-23 ttt
-aire bigotillo
-asaco ariete
-asaco palabras
-bmw agarrate
-bmw mc_fly
-cat tiruri
-chuchos teto
-pinypon nananana
-pop chicote
-ruc ruedas
-x ggg
+Revistas de calidad 5 por criterio 2
+5 Kamasutra
+5 Party_hard
 
 Revistas de calidad 3 por criterio 2
-6 esperpento
-asaco arreando
-esquema trueque
-pinypon comida_rapida
+
+Revistas de calidad 2 por criterio 1
+25 Gamusinos
+43 Moto_verde
+5 Casas
+5 Drojas_blandas
 
 Consulta de revista por titulo
-ariete
-a agua arroz b c chili chuchos e luz oregano pil_pil 
-asaco asaco
+Drojas_blandas
+A H I
+5 3
 2
 
 Consulta de revista por titulo
-mc_fly
-arroz chili chuchos 
-bmw yeah
+La revista Alochol no existe
+
+Consulta de revista por titulo
+Drojas_blandas
+A H I
+5 3
 2
 
-Revistas de calidad 3 por criterio 1
+Consulta de revista por titulo
+La revista Alcohol no existe
 
-Revistas de calidad 3 por criterio 2
+Revistas de calidad 5 por criterio 1
+5 Kamasutra
+5 Party_hard
+
+Revistas de calidad 5 por criterio 2
+5 Kamasutra
+5 Party_hard
+
+Consulta de revista por titulo
+La revista Pepito no existe
+
+Consulta de revista por titulo
+Casas
+B D G H N
+5 5
+2
+
+Consulta de revista por titulo
+La revista Kamasutra no existe
+
+Consulta de revista por titulo
+Casas
+B D G H N O Q Z
+5 5
+2
+
+Revistas de calidad 2 por criterio 2
+24 Gamusinos
+3 Drojas_blandas
+5 Casas
+
+Revistas de calidad 2 por criterio 1
+25 Gamusinos
+5 Casas
+5 Drojas_blandas
+
+Consulta de revista por titulo
+Gamusinos
+D F M
+25 24
+2

@@ -141,11 +141,16 @@ void Biblioteca::fusionar_revistas(const string r1, const string r2, list<Revist
 }
 
 void Biblioteca::reordenar_areas(Revista& r, const int& calidad, const string& nombre, list<Revista>::iterator& it){
-	list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
-	buscar_revista_criterio2(calidad, nombre, it2);
-	it = llibreria[calidad-1].erase(it);
-	it2 = lcriteri2[calidad-1].erase(it2);
-	anadir_revista(r);
+	bool b = ((*it).consultar_AreaTematica(1) == r.consultar_AreaTematica(1));
+	bool c = ((*it).consultar_AreaTematica(2) == r.consultar_AreaTematica(2));
+	bool res = c and b;
+	if (not res){
+		list<pair<string, string> >::iterator it2 = lcriteri2[calidad-1].begin();
+		buscar_revista_criterio2(calidad, nombre, it2);
+		it = llibreria[calidad-1].erase(it);
+		it2 = lcriteri2[calidad-1].erase(it2);
+		anadir_revista(r);
+	}
 }
 
 

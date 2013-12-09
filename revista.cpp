@@ -3,8 +3,9 @@
 void Revista::leer_revista(){
 	nombre = readstring();
 	string palabra_clave =  readstring();
+	list<string>::iterator it = palabras_clave.end();
 	while(palabra_clave != "."){
-		anadir_palabras_clave(palabra_clave);
+		palabras_clave.insert(it, palabra_clave);
 		palabra_clave =  readstring();
 	}
 	cin >> calidad;

@@ -1,6 +1,0 @@
-general literaturas Inglesa AC literatura . . bizantino . . DC . . asco . . vicenazi . . 
-
--1 literatura_escocesa literatura . 1
--1 bizantines_time bizantino . 1
--3 literatura_escocesa bizantines_time
--2 
