@@ -1,8 +1,8 @@
 #ifndef ESTRUCTURA_HPP
 #define ESTRUCTURA_HPP
 
-//#include "Arbre.hpp"
-//#include <string>
+#include "Arbre.hpp"
+#include <string>
 #include "revista.hpp"
 
 class Estructura{
