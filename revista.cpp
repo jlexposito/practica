@@ -35,17 +35,17 @@ const string Revista::consultar_AreaTematica(const int i){
 }
 
 const string Revista::consultar_palabra_clave(const int i){
-	list<string>::iterator it;
-	it = palabras_clave.begin();
-	int n = 1;
-	while (n < i){
-		++it;
-		++n;
-	}
-	return *it;
+    list<string>::iterator it;
+    it = palabras_clave.begin();
+    int n = 1;
+    while (n < i){
+        ++it;
+        ++n;
+    }
+    return *it;
 }
 
-int Revista::num_pal_clave(){
+const int Revista::num_pal_clave(){
 	return palabras_clave.size();
 }
 

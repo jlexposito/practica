@@ -1,0 +1,453 @@
+\hypertarget{class_estructura}{\section{Referencia de la Clase Estructura}
+\label{class_estructura}\index{Estructura@{Estructura}}
+}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_estructura_a5169bd12bdef33436dd75bdf45de18be}{llegir\-\_\-estructura} ()
+\begin{DoxyCompactList}\small\item\em Lectora por defecto. \end{DoxyCompactList}\item 
+string \hyperlink{class_estructura_a756ee7e893ac64230684b5bec1497f0c}{criterio1} (\hyperlink{class_revista}{Revista} \&r1)
+\begin{DoxyCompactList}\small\item\em Criterio1. \end{DoxyCompactList}\item 
+string \hyperlink{class_estructura_af185388c4c717a3e77aef744b755a864}{criterio2} (\hyperlink{class_revista}{Revista} \&r)
+\begin{DoxyCompactList}\small\item\em Criterio1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_estructura_a29c1a2b17790a498dfa27bb626a2407f}{clas\-\_\-criterio1} (\hyperlink{class_arbre}{Arbre}$<$ string $>$ \&a, list$<$ string $>$ \&l, \hyperlink{class_revista}{Revista} \&r1, int \&nivell, string \&res, int \&nivellres)
+\begin{DoxyCompactList}\small\item\em Clas criterio2. \end{DoxyCompactList}\item 
+void \hyperlink{class_estructura_a4bf90d197f1dd7f2ba2df555984fa177}{clas\-\_\-criterio2} (\hyperlink{class_arbre}{Arbre}$<$ string $>$ \&a, \hyperlink{class_revista}{Revista} \&r1, bool \&b, string \&res)
+\begin{DoxyCompactList}\small\item\em Clas criterio2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_estructura_ae0d36375f1d4050785373f843f590e96}{anadir\-\_\-palabra} (list$<$ string $>$ \&l, string \&s)
+\begin{DoxyCompactList}\small\item\em anadir palabra. \end{DoxyCompactList}\item 
+static void \hyperlink{class_estructura_ae79425724c1ad61e334a55cbaa409cf0}{juntar\-\_\-listas} (list$<$ string $>$ \&l1, list$<$ string $>$ \&l2)
+\begin{DoxyCompactList}\small\item\em Juntar listas. \end{DoxyCompactList}\item 
+static void \hyperlink{class_estructura_a3f44d1bc5932abda1a7dc46f46ecbb0c}{llegir\-\_\-estructura\-\_\-arbre} (\hyperlink{class_arbre}{Arbre}$<$ string $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Lectora por defecto de arbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_arbre}{Arbre}$<$ string $>$ \hyperlink{class_estructura_a2db3e23215e96cbc8faae955dfb6df9f}{clasificacion}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 8 del archivo estructura.\-hpp.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_estructura_ae0d36375f1d4050785373f843f590e96}{\index{Estructura@{Estructura}!anadir\-\_\-palabra@{anadir\-\_\-palabra}}
+\index{anadir\-\_\-palabra@{anadir\-\_\-palabra}!Estructura@{Estructura}}
+\subsubsection[{anadir\-\_\-palabra}]{\setlength{\rightskip}{0pt plus 5cm}void Estructura\-::anadir\-\_\-palabra (
+\begin{DoxyParamCaption}
+\item[{list$<$ string $>$ \&}]{l, }
+\item[{string \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_estructura_ae0d36375f1d4050785373f843f590e96}
+
+
+anadir palabra. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+la lista de strings l ahora contiene s ordenada alfabeticamente 
+\end{DoxyPostcond}
+
+
+Definición en la línea 16 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                                         \{
+  list<string>::iterator it = l.begin();
+  \textcolor{keywordtype}{bool} trobat = \textcolor{keyword}{false};
+  \textcolor{keywordtype}{bool} repetit = \textcolor{keyword}{false};
+  \textcolor{keywordflow}{while}(it != l.end() and not trobat)\{
+    \textcolor{keywordflow}{if}((*it) == s) \{
+      repetit = \textcolor{keyword}{true};
+      trobat = \textcolor{keyword}{true};
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((*it) > s) trobat = \textcolor{keyword}{true};
+    \textcolor{keywordflow}{else} ++it;
+  \}
+  l.insert(it, s);
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_ae79425724c1ad61e334a55cbaa409cf0}{\index{Estructura@{Estructura}!juntar\-\_\-listas@{juntar\-\_\-listas}}
+\index{juntar\-\_\-listas@{juntar\-\_\-listas}!Estructura@{Estructura}}
+\subsubsection[{juntar\-\_\-listas}]{\setlength{\rightskip}{0pt plus 5cm}void Estructura\-::juntar\-\_\-listas (
+\begin{DoxyParamCaption}
+\item[{list$<$ string $>$ \&}]{l1, }
+\item[{list$<$ string $>$ \&}]{l2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_estructura_ae79425724c1ad61e334a55cbaa409cf0}
+
+
+Juntar listas. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+l1 es el resultado de combinar ambas listas. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 31 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                \{
+  list<string>::iterator it1;
+  list<string>::iterator it2;
+  it1 = l1.begin();
+  it2 = l2.begin();
+  \textcolor{keywordflow}{while}(it1 != l1.end() and it2 != l2.end())\{
+    \textcolor{keywordflow}{if}((*it1) == (*it2)) ++it2;
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((*it1) > (*it2)) \{
+      l1.insert(it1, (*it2));
+      ++it2;
+    \}
+    \textcolor{keywordflow}{else} ++it1;
+  \}
+  \textcolor{keywordflow}{if}(it1 == l1.end() and it2 != l2.end())\{
+    \textcolor{keywordflow}{while}(it2 != l2.end()) \{
+      l1.insert(l1.end(), (*it2));
+      ++it2;
+    \}
+  \}
+  
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_a29c1a2b17790a498dfa27bb626a2407f}{\index{Estructura@{Estructura}!clas\-\_\-criterio1@{clas\-\_\-criterio1}}
+\index{clas\-\_\-criterio1@{clas\-\_\-criterio1}!Estructura@{Estructura}}
+\subsubsection[{clas\-\_\-criterio1}]{\setlength{\rightskip}{0pt plus 5cm}void Estructura\-::clas\-\_\-criterio1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbre}$<$ string $>$ \&}]{a, }
+\item[{list$<$ string $>$ \&}]{l, }
+\item[{{\bf Revista} \&}]{r1, }
+\item[{int \&}]{nivell, }
+\item[{string \&}]{res, }
+\item[{int \&}]{nivellres}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_estructura_a29c1a2b17790a498dfa27bb626a2407f}
+
+
+Clas criterio2. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+res contiene la area tematica asociada a la revista r por criterio 2. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 71 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                                              \{
+  \textcolor{keywordflow}{if}(not a.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}())\{
+    \textcolor{keywordtype}{string} s = a.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+    \hyperlink{class_arbre}{Arbre<string>} ae, ad;
+    a.\hyperlink{class_arbre_aee75355cee7599e132de75781d26a61d}{fills}(ae,ad);
+    \textcolor{keywordflow}{if}(ae.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}() and ad.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}())\{
+      \textcolor{comment}{//COMPROVAR SI ES PC}
+      \textcolor{keywordtype}{bool} b = r1.\hyperlink{class_revista_a5a6f6d3a8f5ef4f233d794a705b686c6}{buscar\_palabra\_clave}(s);
+      \textcolor{keywordflow}{if} (b) \hyperlink{class_estructura_ae0d36375f1d4050785373f843f590e96}{anadir\_palabra}(l,s);
+    \}
+    \textcolor{keywordflow}{else} \{
+      \textcolor{keywordtype}{int} nivellE = nivell+1;
+      \textcolor{keywordtype}{int} nivellD = nivell+1;
+      \textcolor{keywordtype}{string} resE, resD;
+      list<string> le;
+      list<string> ld;
+      \textcolor{keywordtype}{int} nivellresE, nivellresD;
+      nivellresE = nivellresD = 0;
+      \textcolor{keywordflow}{if}(not ae.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}())\hyperlink{class_estructura_a29c1a2b17790a498dfa27bb626a2407f}{clas\_criterio1}(ae, le, r1, 
+      nivellE, res, nivellres);
+      \textcolor{keywordflow}{if}(not ad.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}())\hyperlink{class_estructura_a29c1a2b17790a498dfa27bb626a2407f}{clas\_criterio1}(ad, ld, r1, 
+      nivellD, res, nivellres);
+      \textcolor{keywordflow}{if}(le.size() == r1.\hyperlink{class_revista_ae9f679caa49af37009e53cd0bce98831}{num\_pal\_clave}())\{
+        \textcolor{keywordflow}{if}(ld.size() == r1.\hyperlink{class_revista_ae9f679caa49af37009e53cd0bce98831}{num\_pal\_clave}())\{
+          \textcolor{keywordflow}{if}(nivellE > nivellD)\{
+            \textcolor{keywordflow}{if}(nivellE > nivellres)\{
+              res = ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+              nivellres = nivellE;
+            \}
+          \}
+          \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (nivellD > nivellE)\{
+            \textcolor{keywordflow}{if}(nivellD > nivellres)\{
+              res = ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+              nivellres = nivellD;
+            \}
+          \}
+          \textcolor{keywordflow}{else}\{ \textcolor{comment}{//NIVELLS IGUALS}
+            \textcolor{keywordflow}{if}(nivellE >= nivellres)\{
+              \textcolor{keywordflow}{if}(nivellE > nivellres)\{
+                \textcolor{keywordflow}{if}(ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}() < ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}())\{
+                  \textcolor{keywordflow}{if}(ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}() < res) \{
+                    res = ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+                    nivellres = nivellE;
+                  \}
+                \}
+                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}() < res)\{
+                  res = ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+                  nivellres = nivellD;
+                \}
+              \}
+              \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(nivellE == nivellres)\{
+                \textcolor{keywordflow}{if}(ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}() < ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}())\{
+                  \textcolor{keywordflow}{if}(ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}() < res) \{
+                    res = ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+                    nivellres = nivellE;
+                  \}
+                \}
+                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}() < res) \{
+                  res = ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+                  nivellres = nivellD;
+                \} 
+              \}
+            \}
+          \}
+        \}
+        \textcolor{keywordflow}{else}\{
+          \textcolor{keywordflow}{if}(nivellE > nivellres)\{
+            res = ae.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+            nivellres = nivellD;
+          \}
+        \}
+      \}
+      \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ld.size() == r1.\hyperlink{class_revista_ae9f679caa49af37009e53cd0bce98831}{num\_pal\_clave}())\{
+        \textcolor{keywordflow}{if}(nivellD > nivellres)\{
+          res = ad.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+          nivellres = nivellD;
+        \}
+      \}
+      \textcolor{comment}{//juntar listas}
+      \hyperlink{class_estructura_ae79425724c1ad61e334a55cbaa409cf0}{juntar\_listas}(le, ld);
+      l = le;
+      \textcolor{keywordflow}{if}(l.size() == r1.\hyperlink{class_revista_ae9f679caa49af37009e53cd0bce98831}{num\_pal\_clave}())\{
+        \textcolor{keywordflow}{if}(nivell > nivellres) \{
+          res = s;
+          nivellres = nivell;
+         \}
+         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (nivell == nivellres)\{
+           \textcolor{keywordflow}{if}(s < res) res = s;
+         \}
+       \}
+       \textcolor{comment}{//cout << s << " NivelE " << nivellE << " " << l.size() << " NivellD "
+       << nivellD << " " << le.size() << " " << ld.size() << " " << res << " " <<
+       nivellres << endl;}
+    \}
+    
+    a.\hyperlink{class_arbre_a806d45f6f1d3a9dd357563979186f721}{plantar}(s, ae, ad);      
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_a4bf90d197f1dd7f2ba2df555984fa177}{\index{Estructura@{Estructura}!clas\-\_\-criterio2@{clas\-\_\-criterio2}}
+\index{clas\-\_\-criterio2@{clas\-\_\-criterio2}!Estructura@{Estructura}}
+\subsubsection[{clas\-\_\-criterio2}]{\setlength{\rightskip}{0pt plus 5cm}void Estructura\-::clas\-\_\-criterio2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbre}$<$ string $>$ \&}]{a, }
+\item[{{\bf Revista} \&}]{r1, }
+\item[{bool \&}]{b, }
+\item[{string \&}]{res}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_estructura_a4bf90d197f1dd7f2ba2df555984fa177}
+
+
+Clas criterio2. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+res contiene la area tematica asociada a la revista r por criterio 2. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 166 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+         \{
+  \textcolor{keywordflow}{if}(not a.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}())\{
+    \textcolor{keywordtype}{string} s = a.\hyperlink{class_arbre_aa6e2559ead7dfceda962cff11fb1a15c}{arrel}();
+    \hyperlink{class_arbre}{Arbre<string>} ae, ad;
+    a.\hyperlink{class_arbre_aee75355cee7599e132de75781d26a61d}{fills}(ae,ad);
+    \textcolor{keywordtype}{bool} be, bd;
+    be = bd = \textcolor{keyword}{false};
+    \textcolor{keywordflow}{if}(ae.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}() and ad.\hyperlink{class_arbre_a68a51f6689f0b2889e8e1d56266fd620}{es\_buit}())\{
+      b = r1.\hyperlink{class_revista_a5a6f6d3a8f5ef4f233d794a705b686c6}{buscar\_palabra\_clave}(s);
+      \textcolor{keywordflow}{if}(b)res = s;
+    \}
+    \textcolor{keywordflow}{else}\{
+      \hyperlink{class_estructura_a4bf90d197f1dd7f2ba2df555984fa177}{clas\_criterio2}(ae, r1, be, res);
+      \hyperlink{class_estructura_a4bf90d197f1dd7f2ba2df555984fa177}{clas\_criterio2}(ad, r1, bd, res);
+      b = bd or be;
+      \textcolor{keywordflow}{if}(be and bd)\{
+        res  = s;
+        b = bd;
+      \}
+    \}
+    a.\hyperlink{class_arbre_a806d45f6f1d3a9dd357563979186f721}{plantar}(s, ae, ad);
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_a3f44d1bc5932abda1a7dc46f46ecbb0c}{\index{Estructura@{Estructura}!llegir\-\_\-estructura\-\_\-arbre@{llegir\-\_\-estructura\-\_\-arbre}}
+\index{llegir\-\_\-estructura\-\_\-arbre@{llegir\-\_\-estructura\-\_\-arbre}!Estructura@{Estructura}}
+\subsubsection[{llegir\-\_\-estructura\-\_\-arbre}]{\setlength{\rightskip}{0pt plus 5cm}void Estructura\-::llegir\-\_\-estructura\-\_\-arbre (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbre}$<$ string $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_estructura_a3f44d1bc5932abda1a7dc46f46ecbb0c}
+
+
+Lectora por defecto de arbol. 
+
+\begin{DoxyPrecond}{Precondición}
+Esta preparada en el canal estandar de entrada la estructura del arbol. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el arbol a contiene la clasificacion leida del canal estandar de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 4 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                                        \{
+  \hyperlink{class_arbre}{Arbre<string>} a1;
+  \hyperlink{class_arbre}{Arbre<string>} a2;
+  \textcolor{keywordtype}{string} x;
+  cin >> x;
+  \textcolor{keywordflow}{if} (x != \textcolor{stringliteral}{"."}) \{
+  \hyperlink{class_estructura_a3f44d1bc5932abda1a7dc46f46ecbb0c}{llegir\_estructura\_arbre}(a1);
+  \hyperlink{class_estructura_a3f44d1bc5932abda1a7dc46f46ecbb0c}{llegir\_estructura\_arbre}(a2);
+  a.\hyperlink{class_arbre_a806d45f6f1d3a9dd357563979186f721}{plantar}(x,a1,a2);
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_a5169bd12bdef33436dd75bdf45de18be}{\index{Estructura@{Estructura}!llegir\-\_\-estructura@{llegir\-\_\-estructura}}
+\index{llegir\-\_\-estructura@{llegir\-\_\-estructura}!Estructura@{Estructura}}
+\subsubsection[{llegir\-\_\-estructura}]{\setlength{\rightskip}{0pt plus 5cm}void Estructura\-::llegir\-\_\-estructura (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_estructura_a5169bd12bdef33436dd75bdf45de18be}
+
+
+Lectora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+Esta preparada en el canal estandar de entrada la estructura del arbol. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el arbol a contiene la clasificacion leida del canal estandar de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 53 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                  \{
+  \hyperlink{class_estructura_a3f44d1bc5932abda1a7dc46f46ecbb0c}{llegir\_estructura\_arbre}(\hyperlink{class_estructura_a2db3e23215e96cbc8faae955dfb6df9f}{clasificacion});
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_a756ee7e893ac64230684b5bec1497f0c}{\index{Estructura@{Estructura}!criterio1@{criterio1}}
+\index{criterio1@{criterio1}!Estructura@{Estructura}}
+\subsubsection[{criterio1}]{\setlength{\rightskip}{0pt plus 5cm}string Estructura\-::criterio1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Revista} \&}]{r1}
+\end{DoxyParamCaption}
+)}}\label{class_estructura_a756ee7e893ac64230684b5bec1497f0c}
+
+
+Criterio1. 
+
+\begin{DoxyPrecond}{Precondición}
+R es una revista que existe en la biblioteca 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la area tematica asociada a la revista r por criterio 2. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 57 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                       \{
+  \textcolor{keywordtype}{string} res;
+  \textcolor{keywordtype}{int} tamany = r1.\hyperlink{class_revista_ae9f679caa49af37009e53cd0bce98831}{num\_pal\_clave}();
+  \textcolor{keywordflow}{if}(tamany > 1)\{
+    list<string> l;
+    \hyperlink{class_arbre}{Arbre<string>} a = \hyperlink{class_estructura_a2db3e23215e96cbc8faae955dfb6df9f}{clasificacion};
+    \textcolor{keywordtype}{int} nivellres = -1;
+    \textcolor{keywordtype}{int} nivell = 0;
+    \hyperlink{class_estructura_a29c1a2b17790a498dfa27bb626a2407f}{clas\_criterio1}(a, l, r1, nivell, res, nivellres);
+  \}
+  \textcolor{keywordflow}{else} res = r1.\hyperlink{class_revista_a3e2906ef22fd65c8e57cbbde97b341ab}{consultar\_palabra\_clave}(1);
+  \textcolor{keywordflow}{return} res;
+\}
+\end{DoxyCode}
+\hypertarget{class_estructura_af185388c4c717a3e77aef744b755a864}{\index{Estructura@{Estructura}!criterio2@{criterio2}}
+\index{criterio2@{criterio2}!Estructura@{Estructura}}
+\subsubsection[{criterio2}]{\setlength{\rightskip}{0pt plus 5cm}string Estructura\-::criterio2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Revista} \&}]{r}
+\end{DoxyParamCaption}
+)}}\label{class_estructura_af185388c4c717a3e77aef744b755a864}
+
+
+Criterio1. 
+
+\begin{DoxyPrecond}{Precondición}
+R es una revista que existe en la biblioteca 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la area tematica asociada a la revista r por criterio 2. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 190 del archivo estructura.\-cpp.
+
+
+\begin{DoxyCode}
+                                      \{
+  \textcolor{keywordtype}{bool} b = \textcolor{keyword}{false};
+  \textcolor{keywordtype}{string} res;
+  \hyperlink{class_arbre}{Arbre<string>} a = \hyperlink{class_estructura_a2db3e23215e96cbc8faae955dfb6df9f}{clasificacion};
+  \hyperlink{class_estructura_a4bf90d197f1dd7f2ba2df555984fa177}{clas\_criterio2}(a, r, b, res);
+  \textcolor{keywordflow}{return} res;
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_estructura_a2db3e23215e96cbc8faae955dfb6df9f}{\index{Estructura@{Estructura}!clasificacion@{clasificacion}}
+\index{clasificacion@{clasificacion}!Estructura@{Estructura}}
+\subsubsection[{clasificacion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbre}$<$string$>$ Estructura\-::clasificacion\hspace{0.3cm}{\ttfamily [private]}}}\label{class_estructura_a2db3e23215e96cbc8faae955dfb6df9f}
+
+
+Definición en la línea 11 del archivo estructura.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{estructura_8hpp}{estructura.\-hpp}\item 
+\hyperlink{estructura_8cpp}{estructura.\-cpp}\end{DoxyCompactItemize}

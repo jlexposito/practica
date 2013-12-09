@@ -1,0 +1,368 @@
+\hypertarget{class_revista}{\section{Referencia de la Clase Revista}
+\label{class_revista}\index{Revista@{Revista}}
+}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_revista_aff45d18000f503ccaaba3fe8f956661c}{modificar\-\_\-\-Areas\-Tematicas} (const string area1, const string area2)
+\begin{DoxyCompactList}\small\item\em Modificadora areas tematicas. \end{DoxyCompactList}\item 
+void \hyperlink{class_revista_a66196e55b9c7bc258503ff156bde1017}{anadir\-\_\-palabras\-\_\-clave} (string s)
+\begin{DoxyCompactList}\small\item\em Añadir palabras clave. \end{DoxyCompactList}\item 
+const string \hyperlink{class_revista_ac4280da6c0b0ba71f544ce0dae897090}{consultar\-\_\-nombre} ()
+\begin{DoxyCompactList}\small\item\em Consultora del nombre de la revista. \end{DoxyCompactList}\item 
+bool \hyperlink{class_revista_a5a6f6d3a8f5ef4f233d794a705b686c6}{buscar\-\_\-palabra\-\_\-clave} (const string \&\hyperlink{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}{nombre})
+\begin{DoxyCompactList}\small\item\em Consultora de la iessima palabra clave. \end{DoxyCompactList}\item 
+const string \hyperlink{class_revista_a3e2906ef22fd65c8e57cbbde97b341ab}{consultar\-\_\-palabra\-\_\-clave} (const int i)
+\begin{DoxyCompactList}\small\item\em Consultar Palabra clave. \end{DoxyCompactList}\item 
+const string \hyperlink{class_revista_ac3f02e06468f395bafdf7065469d46de}{consultar\-\_\-\-Area\-Tematica} (const int i)
+\begin{DoxyCompactList}\small\item\em Consultor Area Tematica. \end{DoxyCompactList}\item 
+const int \hyperlink{class_revista_ae9f679caa49af37009e53cd0bce98831}{num\-\_\-pal\-\_\-clave} ()
+\begin{DoxyCompactList}\small\item\em Consultora numero de palabras clave. \end{DoxyCompactList}\item 
+const int \hyperlink{class_revista_add538845ad88732d60bbd18d179bba5a}{consultar\-\_\-calidad} ()
+\begin{DoxyCompactList}\small\item\em Consultora calidad. \end{DoxyCompactList}\item 
+void \hyperlink{class_revista_a61178cb7b236db9a3354d5d00df1b31b}{leer\-\_\-revista} ()
+\begin{DoxyCompactList}\small\item\em Lectora por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_revista_a3771f31a8cc027b802e99e378890c818}{calidad}
+\item 
+string \hyperlink{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}{nombre}
+\item 
+list$<$ string $>$ \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\-\_\-clave}
+\item 
+string \hyperlink{class_revista_ad648f3e7381a6b8d6ab218c04a222c37}{Area\-Tematica1}
+\item 
+string \hyperlink{class_revista_a09c823de4709bc494a3373140133ad8d}{Area\-Tematica2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 8 del archivo revista.\-hpp.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_revista_aff45d18000f503ccaaba3fe8f956661c}{\index{Revista@{Revista}!modificar\-\_\-\-Areas\-Tematicas@{modificar\-\_\-\-Areas\-Tematicas}}
+\index{modificar\-\_\-\-Areas\-Tematicas@{modificar\-\_\-\-Areas\-Tematicas}!Revista@{Revista}}
+\subsubsection[{modificar\-\_\-\-Areas\-Tematicas}]{\setlength{\rightskip}{0pt plus 5cm}void Revista\-::modificar\-\_\-\-Areas\-Tematicas (
+\begin{DoxyParamCaption}
+\item[{const string}]{area1, }
+\item[{const string}]{area2}
+\end{DoxyParamCaption}
+)}}\label{class_revista_aff45d18000f503ccaaba3fe8f956661c}
+
+
+Modificadora areas tematicas. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el parametro implicito tiene area1 y area2 como sus areas asociadas. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 66 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                            \{
+  \hyperlink{class_revista_ad648f3e7381a6b8d6ab218c04a222c37}{AreaTematica1} = area1;
+  \hyperlink{class_revista_a09c823de4709bc494a3373140133ad8d}{AreaTematica2} = area2;
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_a66196e55b9c7bc258503ff156bde1017}{\index{Revista@{Revista}!anadir\-\_\-palabras\-\_\-clave@{anadir\-\_\-palabras\-\_\-clave}}
+\index{anadir\-\_\-palabras\-\_\-clave@{anadir\-\_\-palabras\-\_\-clave}!Revista@{Revista}}
+\subsubsection[{anadir\-\_\-palabras\-\_\-clave}]{\setlength{\rightskip}{0pt plus 5cm}void Revista\-::anadir\-\_\-palabras\-\_\-clave (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_revista_a66196e55b9c7bc258503ff156bde1017}
+
+
+Añadir palabras clave. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+las pclave se añaden a la revista. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 14 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                           \{
+  list<string>::iterator it = \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.begin();
+  \textcolor{keywordtype}{bool} trobat = \textcolor{keyword}{false};
+  \textcolor{keywordtype}{bool} repetit = \textcolor{keyword}{false};
+  \textcolor{keywordflow}{while}(it != \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.end() and not trobat and not repetit
+      )\{
+    \textcolor{keywordflow}{if}((*it) < s) ++it;
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((*it) == s) repetit = \textcolor{keyword}{true};
+    \textcolor{keywordflow}{else}\{
+      trobat = \textcolor{keyword}{true};
+    \}
+  \}
+  \textcolor{keywordflow}{if}(not repetit)\hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.insert(it,s);
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_ac4280da6c0b0ba71f544ce0dae897090}{\index{Revista@{Revista}!consultar\-\_\-nombre@{consultar\-\_\-nombre}}
+\index{consultar\-\_\-nombre@{consultar\-\_\-nombre}!Revista@{Revista}}
+\subsubsection[{consultar\-\_\-nombre}]{\setlength{\rightskip}{0pt plus 5cm}const string Revista\-::consultar\-\_\-nombre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_revista_ac4280da6c0b0ba71f544ce0dae897090}
+
+
+Consultora del nombre de la revista. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es nombre del parámetro implícito. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 28 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                      \{
+  \textcolor{keywordflow}{return} \hyperlink{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}{nombre};
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_a5a6f6d3a8f5ef4f233d794a705b686c6}{\index{Revista@{Revista}!buscar\-\_\-palabra\-\_\-clave@{buscar\-\_\-palabra\-\_\-clave}}
+\index{buscar\-\_\-palabra\-\_\-clave@{buscar\-\_\-palabra\-\_\-clave}!Revista@{Revista}}
+\subsubsection[{buscar\-\_\-palabra\-\_\-clave}]{\setlength{\rightskip}{0pt plus 5cm}bool Revista\-::buscar\-\_\-palabra\-\_\-clave (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{nombre}
+\end{DoxyParamCaption}
+)}}\label{class_revista_a5a6f6d3a8f5ef4f233d794a705b686c6}
+
+
+Consultora de la iessima palabra clave. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la iessima palabra clave. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 56 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                                      \{
+  \textcolor{keywordtype}{bool} resultat = \textcolor{keyword}{false};
+  list<string>::const\_iterator it = \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.begin();
+  \textcolor{keywordflow}{while}(it != \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.end() and not resultat)\{
+    \textcolor{keywordflow}{if}((*it) == \hyperlink{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}{nombre}) resultat = \textcolor{keyword}{true};
+    ++it;
+  \}
+  \textcolor{keywordflow}{return} resultat;
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_a3e2906ef22fd65c8e57cbbde97b341ab}{\index{Revista@{Revista}!consultar\-\_\-palabra\-\_\-clave@{consultar\-\_\-palabra\-\_\-clave}}
+\index{consultar\-\_\-palabra\-\_\-clave@{consultar\-\_\-palabra\-\_\-clave}!Revista@{Revista}}
+\subsubsection[{consultar\-\_\-palabra\-\_\-clave}]{\setlength{\rightskip}{0pt plus 5cm}const string Revista\-::consultar\-\_\-palabra\-\_\-clave (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_revista_a3e2906ef22fd65c8e57cbbde97b341ab}
+
+
+Consultar Palabra clave. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la palabra clave de posicion iessima. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 37 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                                        \{
+    list<string>::iterator it;
+    it = \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.begin();
+    \textcolor{keywordtype}{int} n = 1;
+    \textcolor{keywordflow}{while} (n < i)\{
+        ++it;
+        ++n;
+    \}
+    \textcolor{keywordflow}{return} *it;
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_ac3f02e06468f395bafdf7065469d46de}{\index{Revista@{Revista}!consultar\-\_\-\-Area\-Tematica@{consultar\-\_\-\-Area\-Tematica}}
+\index{consultar\-\_\-\-Area\-Tematica@{consultar\-\_\-\-Area\-Tematica}!Revista@{Revista}}
+\subsubsection[{consultar\-\_\-\-Area\-Tematica}]{\setlength{\rightskip}{0pt plus 5cm}const string Revista\-::consultar\-\_\-\-Area\-Tematica (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_revista_ac3f02e06468f395bafdf7065469d46de}
+
+
+Consultor Area Tematica. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el area tematica del parámetro implícito. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 32 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                                       \{
+  \textcolor{keywordflow}{if}(i == 1) \textcolor{keywordflow}{return} \hyperlink{class_revista_ad648f3e7381a6b8d6ab218c04a222c37}{AreaTematica1};
+  \textcolor{keywordflow}{if}(i == 2) \textcolor{keywordflow}{return} \hyperlink{class_revista_a09c823de4709bc494a3373140133ad8d}{AreaTematica2};
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_ae9f679caa49af37009e53cd0bce98831}{\index{Revista@{Revista}!num\-\_\-pal\-\_\-clave@{num\-\_\-pal\-\_\-clave}}
+\index{num\-\_\-pal\-\_\-clave@{num\-\_\-pal\-\_\-clave}!Revista@{Revista}}
+\subsubsection[{num\-\_\-pal\-\_\-clave}]{\setlength{\rightskip}{0pt plus 5cm}const int Revista\-::num\-\_\-pal\-\_\-clave (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_revista_ae9f679caa49af37009e53cd0bce98831}
+
+
+Consultora numero de palabras clave. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de palabras clave que tiene el parametro implicito. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 48 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                \{
+  \textcolor{keywordflow}{return} \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.size();
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_add538845ad88732d60bbd18d179bba5a}{\index{Revista@{Revista}!consultar\-\_\-calidad@{consultar\-\_\-calidad}}
+\index{consultar\-\_\-calidad@{consultar\-\_\-calidad}!Revista@{Revista}}
+\subsubsection[{consultar\-\_\-calidad}]{\setlength{\rightskip}{0pt plus 5cm}const int Revista\-::consultar\-\_\-calidad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_revista_add538845ad88732d60bbd18d179bba5a}
+
+
+Consultora calidad. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado la calidad que tiene el parametro implicito. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 52 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                                    \{
+  \textcolor{keywordflow}{return} \hyperlink{class_revista_a3771f31a8cc027b802e99e378890c818}{calidad};
+\}
+\end{DoxyCode}
+\hypertarget{class_revista_a61178cb7b236db9a3354d5d00df1b31b}{\index{Revista@{Revista}!leer\-\_\-revista@{leer\-\_\-revista}}
+\index{leer\-\_\-revista@{leer\-\_\-revista}!Revista@{Revista}}
+\subsubsection[{leer\-\_\-revista}]{\setlength{\rightskip}{0pt plus 5cm}void Revista\-::leer\-\_\-revista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_revista_a61178cb7b236db9a3354d5d00df1b31b}
+
+
+Lectora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+Estan preparados en el canal de entrada toda la información de la revista. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se le ha asignado a la revista todos sus parámetros. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo revista.\-cpp.
+
+
+\begin{DoxyCode}
+                          \{
+  \hyperlink{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}{nombre} = readstring();
+  \textcolor{keywordtype}{string} palabra\_clave =  readstring();
+  list<string>::iterator it = \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.end();
+  \textcolor{keywordflow}{while}(palabra\_clave != \textcolor{stringliteral}{"."})\{
+    \hyperlink{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{palabras\_clave}.insert(it, palabra\_clave);
+    palabra\_clave =  readstring();
+  \}
+  cin >> \hyperlink{class_revista_a3771f31a8cc027b802e99e378890c818}{calidad};
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_revista_a3771f31a8cc027b802e99e378890c818}{\index{Revista@{Revista}!calidad@{calidad}}
+\index{calidad@{calidad}!Revista@{Revista}}
+\subsubsection[{calidad}]{\setlength{\rightskip}{0pt plus 5cm}int Revista\-::calidad\hspace{0.3cm}{\ttfamily [private]}}}\label{class_revista_a3771f31a8cc027b802e99e378890c818}
+
+
+Definición en la línea 11 del archivo revista.\-hpp.
+
+\hypertarget{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}{\index{Revista@{Revista}!nombre@{nombre}}
+\index{nombre@{nombre}!Revista@{Revista}}
+\subsubsection[{nombre}]{\setlength{\rightskip}{0pt plus 5cm}string Revista\-::nombre\hspace{0.3cm}{\ttfamily [private]}}}\label{class_revista_a8f33fc429436702dc5bdd6abff4ec9ac}
+
+
+Definición en la línea 12 del archivo revista.\-hpp.
+
+\hypertarget{class_revista_abad6d1662e4763f4471640c8f8d5aa82}{\index{Revista@{Revista}!palabras\-\_\-clave@{palabras\-\_\-clave}}
+\index{palabras\-\_\-clave@{palabras\-\_\-clave}!Revista@{Revista}}
+\subsubsection[{palabras\-\_\-clave}]{\setlength{\rightskip}{0pt plus 5cm}list$<$string$>$ Revista\-::palabras\-\_\-clave\hspace{0.3cm}{\ttfamily [private]}}}\label{class_revista_abad6d1662e4763f4471640c8f8d5aa82}
+
+
+Definición en la línea 13 del archivo revista.\-hpp.
+
+\hypertarget{class_revista_ad648f3e7381a6b8d6ab218c04a222c37}{\index{Revista@{Revista}!Area\-Tematica1@{Area\-Tematica1}}
+\index{Area\-Tematica1@{Area\-Tematica1}!Revista@{Revista}}
+\subsubsection[{Area\-Tematica1}]{\setlength{\rightskip}{0pt plus 5cm}string Revista\-::\-Area\-Tematica1\hspace{0.3cm}{\ttfamily [private]}}}\label{class_revista_ad648f3e7381a6b8d6ab218c04a222c37}
+
+
+Definición en la línea 14 del archivo revista.\-hpp.
+
+\hypertarget{class_revista_a09c823de4709bc494a3373140133ad8d}{\index{Revista@{Revista}!Area\-Tematica2@{Area\-Tematica2}}
+\index{Area\-Tematica2@{Area\-Tematica2}!Revista@{Revista}}
+\subsubsection[{Area\-Tematica2}]{\setlength{\rightskip}{0pt plus 5cm}string Revista\-::\-Area\-Tematica2\hspace{0.3cm}{\ttfamily [private]}}}\label{class_revista_a09c823de4709bc494a3373140133ad8d}
+
+
+Definición en la línea 14 del archivo revista.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{revista_8hpp}{revista.\-hpp}\item 
+\hyperlink{revista_8cpp}{revista.\-cpp}\end{DoxyCompactItemize}

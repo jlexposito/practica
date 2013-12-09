@@ -1,0 +1,100 @@
+\hypertarget{pro2_8cpp}{\section{Referencia del Archivo pro2.\-cpp}
+\label{pro2_8cpp}\index{pro2.\-cpp@{pro2.\-cpp}}
+}
+Dependencia gráfica adjunta para pro2.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{pro2_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pro2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{pro2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{pro2.\-cpp@{pro2.\-cpp}!main@{main}}
+\index{main@{main}!pro2.cpp@{pro2.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pro2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definición en la línea 4 del archivo pro2.\-cpp.
+
+
+\begin{DoxyCode}
+          \{
+  \textcolor{keywordtype}{int} n = readint();
+  \hyperlink{class_biblioteca}{Biblioteca} b(n);
+  \hyperlink{class_estructura}{Estructura} c;
+  c.\hyperlink{class_estructura_a5169bd12bdef33436dd75bdf45de18be}{llegir\_estructura}();
+  \textcolor{keywordtype}{int} operacion = readint();
+  \textcolor{keywordflow}{while}(operacion != -6)\{
+    \textcolor{keywordflow}{if}(operacion == -1)\{    \textcolor{comment}{//ALTA REVISTA}
+      \hyperlink{class_revista}{Revista} r;
+      r.\hyperlink{class_revista_a61178cb7b236db9a3354d5d00df1b31b}{leer\_revista}();
+      \textcolor{keywordtype}{string} area1 = c.\hyperlink{class_estructura_a756ee7e893ac64230684b5bec1497f0c}{criterio1}(r);
+      \textcolor{keywordtype}{string} area2 = c.\hyperlink{class_estructura_af185388c4c717a3e77aef744b755a864}{criterio2}(r);
+      r.\hyperlink{class_revista_aff45d18000f503ccaaba3fe8f956661c}{modificar\_AreasTematicas}(area1, area2);
+      b.anadir\_revista(r);
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(operacion == -2)\{
+      \textcolor{keywordtype}{string} r1 = readstring();
+      b.eliminar\_revista(r1);
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(operacion == -3)\{   \textcolor{comment}{//FUSIONAR REVISTAS}
+      \textcolor{keywordtype}{string} r1, r2;
+      r1 = readstring();
+      r2 =  readstring();
+      \textcolor{keywordtype}{bool} b1;
+      list<Revista>::iterator it;
+      b.fusionar\_revistas(r1, r2, it, b1);
+      \textcolor{keywordflow}{if}(b1)\{
+        \hyperlink{class_revista}{Revista} r = (*it);
+        \textcolor{keywordtype}{string} area1 = c.\hyperlink{class_estructura_a756ee7e893ac64230684b5bec1497f0c}{criterio1}(r);
+        \textcolor{keywordtype}{string} area2 = c.\hyperlink{class_estructura_af185388c4c717a3e77aef744b755a864}{criterio2}(r);
+        r.\hyperlink{class_revista_aff45d18000f503ccaaba3fe8f956661c}{modificar\_AreasTematicas}(area1, area2);
+        \textcolor{keywordtype}{int} calidad  = (*it).consultar\_calidad();
+        b.reordenar\_areas(r, calidad, r1, it);
+      \}
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == -4)\{
+      \textcolor{keywordtype}{int} calidad = readint();
+      \textcolor{keywordtype}{int} criterio = readint();
+      cout << \textcolor{stringliteral}{"Revistas de calidad "} << calidad << \textcolor{stringliteral}{" por criterio "} << criterio
+       << endl;
+      \textcolor{keywordflow}{if}(criterio == 1) b.listar\_criterio1(calidad);
+      \textcolor{keywordflow}{else} b.listar\_criterio2(calidad);
+      cout << endl;
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == -5)\{    \textcolor{comment}{//CONSULTA DE REVISTAS POR TÍTULO}
+      \textcolor{keywordtype}{string} r1 = readstring();
+      cout << \textcolor{stringliteral}{"Consulta de revista por titulo"}<< endl;
+      list<Revista>::iterator it1;
+      \textcolor{keywordtype}{bool} b1 = \textcolor{keyword}{false};
+      b.buscar\_revista\_criterio1(r1, b1, it1);
+      \textcolor{keywordflow}{if}(b1)\{
+        cout << (*it1).consultar\_nombre() << endl;
+        \textcolor{keywordtype}{int} tamany = (*it1).num\_pal\_clave();
+        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i <= tamany; ++i) \{
+          cout << (*it1).consultar\_palabra\_clave(i); 
+          \textcolor{keywordflow}{if}(i!= tamany) cout << \textcolor{stringliteral}{" "};
+        \}
+        cout << endl;
+        cout << (*it1).consultar\_AreaTematica(1) << \textcolor{stringliteral}{" "} << (*it1).
+      consultar\_AreaTematica(2) << endl;
+        cout << (*it1).consultar\_calidad() << endl;
+      \}
+      \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"La revista "} << r1 << \textcolor{stringliteral}{" no existe"}<< endl;
+      cout << endl;
+    \} 
+    operacion = readint();
+  \}
+\}
+\end{DoxyCode}

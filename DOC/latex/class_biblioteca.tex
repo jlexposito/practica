@@ -1,0 +1,504 @@
+\hypertarget{class_biblioteca}{\section{Referencia de la Clase Biblioteca}
+\label{class_biblioteca}\index{Biblioteca@{Biblioteca}}
+}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_biblioteca_ac95f8ebef5693712c51ab157632b4a27}{anadir\-\_\-revista} (\hyperlink{class_revista}{Revista} \&r)
+\begin{DoxyCompactList}\small\item\em Añadir revista. \end{DoxyCompactList}\item 
+\hyperlink{class_biblioteca_a442743666a699393ac7ec7ee5d5a33ee}{Biblioteca} (int n)
+\item 
+void \hyperlink{class_biblioteca_a903cc3f25beff06e4d59b90968890d4f}{eliminar\-\_\-revista} (const string nombre)
+\begin{DoxyCompactList}\small\item\em Eliminar revista. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_a44ee151b8e8b0630f3f6023ebdfe6930}{fusionar\-\_\-revistas} (const string r1, const string r2, list$<$ \hyperlink{class_revista}{Revista} $>$\-::iterator \&it, bool \&b1)
+\begin{DoxyCompactList}\small\item\em Fusionar revista. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_a05a04c7765610370488f01036d3fadb6}{listar\-\_\-criterio1} (const int \&calidad)
+\begin{DoxyCompactList}\small\item\em Escritora de Revistas por critero1. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_ae27dab12407d26d0dfd162ccd3301cc7}{listar\-\_\-criterio2} (const int \&calidad)
+\begin{DoxyCompactList}\small\item\em Escritora de Revistas por critero2. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_a3ebe216c47fd4163be884ae33673e9c9}{reordenar\-\_\-areas} (\hyperlink{class_revista}{Revista} \&r, const int \&calidad, const string \&nombre, list$<$ \hyperlink{class_revista}{Revista} $>$\-::iterator \&it)
+\begin{DoxyCompactList}\small\item\em Reordenar areas. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_a7cd1f0c187ed2775302182f8c819b6c7}{buscar\-\_\-revista\-\_\-criterio1} (const string r1, bool \&b1, list$<$ \hyperlink{class_revista}{Revista} $>$\-::iterator \&it1)
+\begin{DoxyCompactList}\small\item\em Buscar revista criterio 1. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_aecaaa308d6469f9d4fa4bfeaa22bb6f7}{buscar\-\_\-revista\-\_\-criterio2} (const int \&calidad, const string nombre, list$<$ pair$<$ string, string $>$ $>$\-::iterator \&it1)
+\begin{DoxyCompactList}\small\item\em Buscar revista criterio 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_biblioteca_a71069c0ca59f1e4dd6a481a9ccd90485}{buscar\-\_\-revistas} (const string r1, const string r2, bool \&b1, bool \&b2, list$<$ \hyperlink{class_revista}{Revista} $>$\-::iterator \&it1, list$<$ \hyperlink{class_revista}{Revista} $>$\-::iterator \&it2)
+\begin{DoxyCompactList}\small\item\em Buscar revistas. \end{DoxyCompactList}\item 
+void \hyperlink{class_biblioteca_a8356a46fadc17bd271a1877cb30901fa}{eliminar\-\_\-revista\-\_\-iterador} (list$<$ \hyperlink{class_revista}{Revista} $>$\-::iterator \&it, list$<$ pair$<$ string, string $>$ $>$\-::iterator \&it2, const int calidad)
+\begin{DoxyCompactList}\small\item\em Eliminar revista iterador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ list$<$ \hyperlink{class_revista}{Revista} $>$ $>$ \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}
+\item 
+vector$<$ list$<$ pair$<$ string, \\*
+string $>$ $>$ $>$ \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 5 del archivo biblioteca.\-hpp.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_biblioteca_a442743666a699393ac7ec7ee5d5a33ee}{\index{Biblioteca@{Biblioteca}!Biblioteca@{Biblioteca}}
+\index{Biblioteca@{Biblioteca}!Biblioteca@{Biblioteca}}
+\subsubsection[{Biblioteca}]{\setlength{\rightskip}{0pt plus 5cm}Biblioteca\-::\-Biblioteca (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_a442743666a699393ac7ec7ee5d5a33ee}
+
+
+Definición en la línea 3 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                           \{
+  \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria} = vector<list<Revista> > (n);
+  \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2} = vector<list<pair<string, string> > > (n);
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_biblioteca_a71069c0ca59f1e4dd6a481a9ccd90485}{\index{Biblioteca@{Biblioteca}!buscar\-\_\-revistas@{buscar\-\_\-revistas}}
+\index{buscar\-\_\-revistas@{buscar\-\_\-revistas}!Biblioteca@{Biblioteca}}
+\subsubsection[{buscar\-\_\-revistas}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::buscar\-\_\-revistas (
+\begin{DoxyParamCaption}
+\item[{const string}]{r1, }
+\item[{const string}]{r2, }
+\item[{bool \&}]{b1, }
+\item[{bool \&}]{b2, }
+\item[{list$<$ {\bf Revista} $>$\-::iterator \&}]{it1, }
+\item[{list$<$ {\bf Revista} $>$\-::iterator \&}]{it2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_biblioteca_a71069c0ca59f1e4dd6a481a9ccd90485}
+
+
+Buscar revistas. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si b1 es cierto it1 apunta a la revista con nombre r1 y si b2 es cierto it2 apunta la revista r2. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 59 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                                                                   \{
+  \textcolor{keywordtype}{int} i = 0;
+  list<Revista>::iterator it; 
+  \textcolor{keywordflow}{while}(i < \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}.size() and not (b1 and b2)) \{
+    it = \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[i].begin();
+    \textcolor{keywordflow}{while}(it != \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[i].end())\{
+      \textcolor{keywordtype}{string} nom = (*it).consultar\_nombre();
+      \textcolor{keywordflow}{if}(nom == r1)\{
+        it1 = it;
+        b1 = \textcolor{keyword}{true};
+      \}
+      \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(nom == r2)\{
+        it2 = it;
+        b2 = \textcolor{keyword}{true};
+      \}
+      ++it;
+    \}
+    ++i;
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_a8356a46fadc17bd271a1877cb30901fa}{\index{Biblioteca@{Biblioteca}!eliminar\-\_\-revista\-\_\-iterador@{eliminar\-\_\-revista\-\_\-iterador}}
+\index{eliminar\-\_\-revista\-\_\-iterador@{eliminar\-\_\-revista\-\_\-iterador}!Biblioteca@{Biblioteca}}
+\subsubsection[{eliminar\-\_\-revista\-\_\-iterador}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::eliminar\-\_\-revista\-\_\-iterador (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf Revista} $>$\-::iterator \&}]{it, }
+\item[{list$<$ pair$<$ string, string $>$ $>$\-::iterator \&}]{it2, }
+\item[{const int}]{calidad}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_biblioteca_a8356a46fadc17bd271a1877cb30901fa}
+
+
+Eliminar revista iterador. 
+
+\begin{DoxyPrecond}{Precondición}
+it e it2 apuntan a una revista que existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+todas las apariciones de la revista han sido eliminadas del parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 104 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                                                       \{
+  it = \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].erase(it);
+  it2 = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].erase(it2);
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_ac95f8ebef5693712c51ab157632b4a27}{\index{Biblioteca@{Biblioteca}!anadir\-\_\-revista@{anadir\-\_\-revista}}
+\index{anadir\-\_\-revista@{anadir\-\_\-revista}!Biblioteca@{Biblioteca}}
+\subsubsection[{anadir\-\_\-revista}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::anadir\-\_\-revista (
+\begin{DoxyParamCaption}
+\item[{{\bf Revista} \&}]{r}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_ac95f8ebef5693712c51ab157632b4a27}
+
+
+Añadir revista. 
+
+\begin{DoxyPrecond}{Precondición}
+esta preparada la revista en el canal de entrada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha añadido al parámetro implícito la revista. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 7 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                         \{
+  \textcolor{keywordtype}{bool} trobat = \textcolor{keyword}{false};
+  \textcolor{keywordtype}{int} calidad = r.\hyperlink{class_revista_add538845ad88732d60bbd18d179bba5a}{consultar\_calidad}();
+  \textcolor{keywordtype}{string} area1 = r.\hyperlink{class_revista_ac3f02e06468f395bafdf7065469d46de}{consultar\_AreaTematica}(1);
+  \textcolor{keywordtype}{string} nombre = r.\hyperlink{class_revista_ac4280da6c0b0ba71f544ce0dae897090}{consultar\_nombre}();
+  list<Revista>::iterator it = \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].begin();
+  \textcolor{keywordflow}{while}(it != \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].end() and not trobat)\{
+    \textcolor{keywordflow}{if}((*it).consultar\_AreaTematica(1) >= area1)\{
+      \textcolor{keywordflow}{if}((*it).consultar\_AreaTematica(1) == area1)\{
+        \textcolor{keywordflow}{if}((*it).consultar\_nombre() > nombre) trobat = \textcolor{keyword}{true};
+        \textcolor{keywordflow}{else} ++it;
+      \}
+      \textcolor{keywordflow}{else} trobat = \textcolor{keyword}{true};
+    \}
+    \textcolor{keywordflow}{else} ++it;
+  \}
+  \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].insert(it,r);
+  list<pair<string, string> >::iterator it2 = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].
+      begin();
+  trobat = \textcolor{keyword}{false};
+  \textcolor{keywordtype}{string} area2 = r.\hyperlink{class_revista_ac3f02e06468f395bafdf7065469d46de}{consultar\_AreaTematica}(2);
+  \textcolor{keywordflow}{while}(it2 != \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].end() and not trobat)\{
+    \textcolor{keywordflow}{if}((*it2).first >= area2) \{
+      \textcolor{keywordflow}{if}((*it2).first == area2)\{
+        \textcolor{keywordflow}{if}((*it2).second > nombre) trobat = \textcolor{keyword}{true};
+        \textcolor{keywordflow}{else} ++it2;
+      \}
+      \textcolor{keywordflow}{else} trobat = \textcolor{keyword}{true};
+    \}
+    \textcolor{keywordflow}{else} ++it2;
+  \}
+  pair<string, string> x;
+  x.first = area2;
+  x.second = nombre;  
+  \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].insert(it2,x);
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_a903cc3f25beff06e4d59b90968890d4f}{\index{Biblioteca@{Biblioteca}!eliminar\-\_\-revista@{eliminar\-\_\-revista}}
+\index{eliminar\-\_\-revista@{eliminar\-\_\-revista}!Biblioteca@{Biblioteca}}
+\subsubsection[{eliminar\-\_\-revista}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::eliminar\-\_\-revista (
+\begin{DoxyParamCaption}
+\item[{const string}]{nombre}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_a903cc3f25beff06e4d59b90968890d4f}
+
+
+Eliminar revista. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+la revista ha sido eliminada del parámetro implícito. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 109 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                              \{
+  list<Revista>::iterator it;
+  \textcolor{keywordtype}{bool} b = \textcolor{keyword}{false};
+  \hyperlink{class_biblioteca_a7cd1f0c187ed2775302182f8c819b6c7}{buscar\_revista\_criterio1}(nombre, b, it);
+  \textcolor{keywordtype}{int} calidad  = (*it).consultar\_calidad();
+  \textcolor{keywordflow}{if}(b) \{
+    list<pair<string, string> >::iterator it2 = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].
+      begin();
+    \hyperlink{class_biblioteca_aecaaa308d6469f9d4fa4bfeaa22bb6f7}{buscar\_revista\_criterio2}(calidad, nombre, it2);
+    \hyperlink{class_biblioteca_a8356a46fadc17bd271a1877cb30901fa}{eliminar\_revista\_iterador}(it, it2, calidad);
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_a44ee151b8e8b0630f3f6023ebdfe6930}{\index{Biblioteca@{Biblioteca}!fusionar\-\_\-revistas@{fusionar\-\_\-revistas}}
+\index{fusionar\-\_\-revistas@{fusionar\-\_\-revistas}!Biblioteca@{Biblioteca}}
+\subsubsection[{fusionar\-\_\-revistas}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::fusionar\-\_\-revistas (
+\begin{DoxyParamCaption}
+\item[{const string}]{r1, }
+\item[{const string}]{r2, }
+\item[{list$<$ {\bf Revista} $>$\-::iterator \&}]{it, }
+\item[{bool \&}]{b1}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_a44ee151b8e8b0630f3f6023ebdfe6930}
+
+
+Fusionar revista. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se han fusionado la revista r1 con r2. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 121 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                              \{
+  \textcolor{keywordtype}{bool} b2;
+  b1 = b2 = \textcolor{keyword}{false};
+  list<Revista>::iterator it1, it2;
+  \hyperlink{class_biblioteca_a71069c0ca59f1e4dd6a481a9ccd90485}{buscar\_revistas}(r1, r2, b1, b2, it1, it2);
+  \textcolor{keywordflow}{if}(b1 and b2) \{
+    \textcolor{keywordtype}{string} palabra;
+    \textcolor{keywordtype}{int} tamany = (*it2).num\_pal\_clave();
+
+    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i <= tamany; ++i)\{
+      palabra = (*it2).consultar\_palabra\_clave(i);
+      (*it1).anadir\_palabras\_clave(palabra);
+    \}
+    \textcolor{keywordtype}{int} calidadrev = (*it2).consultar\_calidad();
+    list<pair<string, string> >::iterator it3 = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidadrev-1
+      ].begin();
+    \hyperlink{class_biblioteca_aecaaa308d6469f9d4fa4bfeaa22bb6f7}{buscar\_revista\_criterio2}(calidadrev, r2, it3);
+    \hyperlink{class_biblioteca_a8356a46fadc17bd271a1877cb30901fa}{eliminar\_revista\_iterador}(it2, it3, calidadrev);
+    it = it1;
+  \}
+  \textcolor{keywordflow}{if}(b1) it = it1;
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_a05a04c7765610370488f01036d3fadb6}{\index{Biblioteca@{Biblioteca}!listar\-\_\-criterio1@{listar\-\_\-criterio1}}
+\index{listar\-\_\-criterio1@{listar\-\_\-criterio1}!Biblioteca@{Biblioteca}}
+\subsubsection[{listar\-\_\-criterio1}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::listar\-\_\-criterio1 (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{calidad}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_a05a04c7765610370488f01036d3fadb6}
+
+
+Escritora de Revistas por critero1. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El canal estándar de salida contiene las revistas de calidad \char`\"{}calidad\char`\"{} ordenadas según el criterio1 alfabéticamente. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 43 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                   \{
+  list<Revista>::iterator it = \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].begin();
+  \textcolor{keywordflow}{while} (it != \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].end())\{
+    cout << (*it).consultar\_AreaTematica(1) << \textcolor{stringliteral}{" "} << (*it).consultar\_nombre() 
+      << endl;
+    ++it;
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_ae27dab12407d26d0dfd162ccd3301cc7}{\index{Biblioteca@{Biblioteca}!listar\-\_\-criterio2@{listar\-\_\-criterio2}}
+\index{listar\-\_\-criterio2@{listar\-\_\-criterio2}!Biblioteca@{Biblioteca}}
+\subsubsection[{listar\-\_\-criterio2}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::listar\-\_\-criterio2 (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{calidad}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_ae27dab12407d26d0dfd162ccd3301cc7}
+
+
+Escritora de Revistas por critero2. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El canal estándar de salida contiene las revistas de calidad \char`\"{}calidad\char`\"{} ordenadas según el criterio2 alfabéticamente. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 51 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                   \{
+  list<pair<string, string> >::iterator it = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].
+      begin();
+  \textcolor{keywordflow}{while} (it != \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].end())\{
+    cout << (*it).first << \textcolor{stringliteral}{" "} << (*it).second << endl;
+    ++it;
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_a3ebe216c47fd4163be884ae33673e9c9}{\index{Biblioteca@{Biblioteca}!reordenar\-\_\-areas@{reordenar\-\_\-areas}}
+\index{reordenar\-\_\-areas@{reordenar\-\_\-areas}!Biblioteca@{Biblioteca}}
+\subsubsection[{reordenar\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::reordenar\-\_\-areas (
+\begin{DoxyParamCaption}
+\item[{{\bf Revista} \&}]{r, }
+\item[{const int \&}]{calidad, }
+\item[{const string \&}]{nombre, }
+\item[{list$<$ {\bf Revista} $>$\-::iterator \&}]{it}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_a3ebe216c47fd4163be884ae33673e9c9}
+
+
+Reordenar areas. 
+
+\begin{DoxyPrecond}{Precondición}
+Las estructuras del parámetro implícito contienen la revista r pero estan desordenadas segun crtiterio 1 y criterio 2 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Las estructuras del parámetro implícito contienen la revista r, ordenadas según criterio 1 y criterio 2 
+\end{DoxyPostcond}
+
+
+Definición en la línea 143 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                                      \{
+  \textcolor{keywordtype}{bool} b = ((*it).consultar\_AreaTematica(1) == r.\hyperlink{class_revista_ac3f02e06468f395bafdf7065469d46de}{consultar\_AreaTematica}
+      (1));
+  \textcolor{keywordtype}{bool} c = ((*it).consultar\_AreaTematica(2) == r.\hyperlink{class_revista_ac3f02e06468f395bafdf7065469d46de}{consultar\_AreaTematica}
+      (2));
+  \textcolor{keywordtype}{bool} res = c and b;
+  \textcolor{keywordflow}{if} (not res)\{
+    list<pair<string, string> >::iterator it2 = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].
+      begin();
+    \hyperlink{class_biblioteca_aecaaa308d6469f9d4fa4bfeaa22bb6f7}{buscar\_revista\_criterio2}(calidad, nombre, it2);
+    it = \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[calidad-1].erase(it);
+    it2 = \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].erase(it2);
+    \hyperlink{class_biblioteca_ac95f8ebef5693712c51ab157632b4a27}{anadir\_revista}(r);
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_a7cd1f0c187ed2775302182f8c819b6c7}{\index{Biblioteca@{Biblioteca}!buscar\-\_\-revista\-\_\-criterio1@{buscar\-\_\-revista\-\_\-criterio1}}
+\index{buscar\-\_\-revista\-\_\-criterio1@{buscar\-\_\-revista\-\_\-criterio1}!Biblioteca@{Biblioteca}}
+\subsubsection[{buscar\-\_\-revista\-\_\-criterio1}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::buscar\-\_\-revista\-\_\-criterio1 (
+\begin{DoxyParamCaption}
+\item[{const string}]{r1, }
+\item[{bool \&}]{b1, }
+\item[{list$<$ {\bf Revista} $>$\-::iterator \&}]{it1}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_a7cd1f0c187ed2775302182f8c819b6c7}
+
+
+Buscar revista criterio 1. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si b1 es cierto it apunta a la revista que buscamos en la estructura del del p.\-i. del criterio 1 
+\end{DoxyPostcond}
+
+
+Definición en la línea 79 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                     \{
+  \textcolor{keywordtype}{int} i = 0;
+  \textcolor{keywordflow}{while}(i < \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}.size() and not b1) \{
+    list<Revista>::iterator it;
+    it = \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[i].begin();
+    \textcolor{keywordflow}{while}(it != \hyperlink{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{llibreria}[i].end() and not b1)\{
+      \textcolor{keywordtype}{string} nom = (*it).consultar\_nombre();
+      \textcolor{keywordflow}{if}(nom == r1)\{
+        it1 = it;
+        b1 = \textcolor{keyword}{true};
+      \}
+      ++it;
+    \}
+    ++i;
+  \}
+\}
+\end{DoxyCode}
+\hypertarget{class_biblioteca_aecaaa308d6469f9d4fa4bfeaa22bb6f7}{\index{Biblioteca@{Biblioteca}!buscar\-\_\-revista\-\_\-criterio2@{buscar\-\_\-revista\-\_\-criterio2}}
+\index{buscar\-\_\-revista\-\_\-criterio2@{buscar\-\_\-revista\-\_\-criterio2}!Biblioteca@{Biblioteca}}
+\subsubsection[{buscar\-\_\-revista\-\_\-criterio2}]{\setlength{\rightskip}{0pt plus 5cm}void Biblioteca\-::buscar\-\_\-revista\-\_\-criterio2 (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{calidad, }
+\item[{const string}]{nombre, }
+\item[{list$<$ pair$<$ string, string $>$ $>$\-::iterator \&}]{it1}
+\end{DoxyParamCaption}
+)}}\label{class_biblioteca_aecaaa308d6469f9d4fa4bfeaa22bb6f7}
+
+
+Buscar revista criterio 2. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+it apunta a la revista que buscamos en la estructura del del p.\-i. del criterio 2 
+\end{DoxyPostcond}
+
+
+Definición en la línea 96 del archivo biblioteca.\-cpp.
+
+
+\begin{DoxyCode}
+                                                                               
+                                                 \{
+  \textcolor{keywordtype}{bool} trobat  = \textcolor{keyword}{false};
+  \textcolor{keywordflow}{while}(it1 != \hyperlink{class_biblioteca_a21ee23518a39957324cee31512482753}{lcriteri2}[calidad-1].end() and not trobat)\{
+    \textcolor{keywordflow}{if}((*it1).second == nombre) trobat = \textcolor{keyword}{true};
+    \textcolor{keywordflow}{else} ++it1;
+  \}
+\} 
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}{\index{Biblioteca@{Biblioteca}!llibreria@{llibreria}}
+\index{llibreria@{llibreria}!Biblioteca@{Biblioteca}}
+\subsubsection[{llibreria}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$list$<${\bf Revista}$>$ $>$ Biblioteca\-::llibreria\hspace{0.3cm}{\ttfamily [private]}}}\label{class_biblioteca_a4c02ad960e27222ea30b9a3c663009b8}
+
+
+Definición en la línea 8 del archivo biblioteca.\-hpp.
+
+\hypertarget{class_biblioteca_a21ee23518a39957324cee31512482753}{\index{Biblioteca@{Biblioteca}!lcriteri2@{lcriteri2}}
+\index{lcriteri2@{lcriteri2}!Biblioteca@{Biblioteca}}
+\subsubsection[{lcriteri2}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$list$<$pair$<$string, string$>$ $>$ $>$ Biblioteca\-::lcriteri2\hspace{0.3cm}{\ttfamily [private]}}}\label{class_biblioteca_a21ee23518a39957324cee31512482753}
+
+
+Definición en la línea 9 del archivo biblioteca.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{biblioteca_8hpp}{biblioteca.\-hpp}\item 
+\hyperlink{biblioteca_8cpp}{biblioteca.\-cpp}\end{DoxyCompactItemize}
